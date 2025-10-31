@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mastery Hub Rwanda, Software Development Courses, Web Design Training, ICT Literacy, English Language Courses, French Classes, Kiswahili Training, Piano Lessons, Guitar Classes, Drumming Programs">
+    <meta name="description" content="Mastery Hub offers professional training programs in Software Development, IT solutions, Language courses (English, French, Kiswahili), and Music education. Start your learning journey today.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mastery Hub of Rwanda">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DMY5F8TGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8DMY5F8TGS');
+    </script>
+    <meta name="google-site-verification" content="X0g1v2x4q3G5r7J6j8k9l0m1n2o3p4q5r6s7t8u9v0w" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Mastery Hub | Professional Training Programs in Rwanda">
+    <meta property="og:description" content="Comprehensive courses in Technology, Languages, and Music. Transform your skills with our expert-led programs.">
+    <meta property="og:image" content="https://masteryhub.co.rw/img/logo.png">
+    <meta property="og:url" content="https://masteryhub.co.rw/courses.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mastery Hub | Professional Training Programs in Rwanda">
+    <meta name="twitter:description" content="Comprehensive courses in Technology, Languages, and Music. Transform your skills with our expert-led programs.">
+    <meta name="twitter:image" content="https://masteryhub.co.rw/img/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Title -->
+    <title>Mastery Hub | Comprehensive Courses in Tech, Languages & Music</title>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Course-Specific Styles -->
+    <style>
+        /* Course Badge */
+        .course-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            z-index: 2;
+        }
+        
+        /* Course Overlay */
+        .course-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        .course-item:hover .course-overlay {
+            opacity: 1;
+        }
+        
+        /* Program Duration */
+        .program-duration {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+
+        
+        /* Program Outcomes */
+        .program-outcomes {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .program-outcomes li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+        }
+        
+        .program-outcomes li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Floating Enroll Button */
+        .floating-enroll-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border-radius: 50px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Glass Card Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        /* Hover Scale Effect */
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+
+        /* Modal Fixes */
+        .modal-open {
+            overflow: auto;
+            padding-right: 0 !important;
+        }
+        
+        /* Featured Courses Fix */
+        #courses .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        #courses .col-lg-4 {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .course-item .p-4 {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-item .d-flex.justify-content-between.mt-4 {
+            margin-top: auto;
+        }
+
+        /* Force mobile navigation fixes */
+@media (max-width: 991.98px) {
+    /* Fix navbar toggler alignment */
+    .navbar-toggler {
+        margin-right: 0.5rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .ifoto{
+        visibility: block;
+        width: 100%;
+        position: absolute;
+
+    }
+    .overlay-content{
+        
+        z-index: 2;
+        padding-top: 5rem;
+        position: absolute;
+        bottom: 20%;
+        margin-bottom: 0;
+        padding-left: 1rem;
+    }
+
+
+    /* Ensure dropdowns work in mobile */
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+    
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1.5rem;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+    }
+    
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        color: var(--primary);
+        background-color: transparent;
+    }
+    
+    /* Fix for THE SEMICOLON dropdown */
+    .nav-item.dropdown .nav-link.dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
+}
+    </style>
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="img/MHR LOGO.png" width="90" alt="mhr Logo">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About Us</a>
+            <a href="courses.html" class="nav-item nav-link active">Courses</a>
+            <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="softwaredev.html" class="dropdown-item">Software Development</a>
+                    <a href="internership.html" class="dropdown-item">Internship</a>
+                    <a href="training.html" class="dropdown-item">Training </a>
+                    <a href="consultancy.html" class="dropdown-item">Tech Consultancy</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+       <a href="https://form.jotform.com/250560825113045" target="_blank" class="join-button btn py-4 px-lg-5  d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+
+<!-- Replace your entire hero carousel section with this -->
+<section class="hero-section position-relative overflow-hidden">
+    <!-- Video Background -->
+
+    <div class="">
+        <div class="w-100 bg-light ifoto float-end">
+            <img src="img/masteryhubanime-bgless.gif" width="40%" object-fit="contain" alt="Loading..." class="loading-image ifoto float-end">
+
+        </div>
+        
+        <!-- Overlay -->
+        <div class="video-overlay"></div>
+    </div>
+    
+    <!-- Content Container -->
+    <div class="content-container position-absolute top-0 w-100 h-100  d-flex align-items-center">
+        <div class="container overlay-content">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-start">
+                    <h1 class="display-3 text-white mb-4 animated slideInDown">Master In-Demand Skills</h1>
+                    <p class="fs-5 text-white mb-4 animated slideInDown">Professional training programs in technology, languages, and music</p>
+                    <div class="d-flex gap-3 animated slideInDown">
+                        <a href="#courses" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Explore Courses</a>
+                        <a href="#categories" class="btn btn-light btn-lg rounded-pill px-4 py-2">Browse Categories</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Stats Bar -->
+    <div class="container-fluid bg-primary py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 class="text-white mb-1" data-toggle="counter-up">500</h2>
+                    <p class="text-white mb-0">Students Trained</p>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 class="text-white mb-1" data-toggle="counter-up">30</h2>
+                    <p class="text-white mb-0">Expert Instructors</p>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 class="text-white mb-1" data-toggle="counter-up">50</h2>
+                    <p class="text-white mb-0">Courses Available</p>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 class="text-white mb-1" data-toggle="counter-up">98</h2>
+                    <p class="text-white mb-0">% Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Categories Section -->
+    <section id="categories" class="container-xl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Learning Paths</h6>
+                <h1 class="mb-5">Explore Our Course Categories</h1>
+                <p class="lead text-muted mb-5">Select your area of interest and discover the perfect program for your career goals</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Tech Category -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="category-card glass-card hover-scale text-center p-5 h-100">
+                        <div class="icon-box bg-primary-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-laptop-code fa-2x text-primary"></i>
+                        </div>
+                        <h3 class="mb-3">Technology Programs</h3>
+                        <p class="mb-4">Master in-demand tech skills from web development to AI, cloud computing, and ICT literacy</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-primary-light text-dark me-2">12 Programs</span>
+                            <span class="badge bg-primary-light text-dark">6 Specializations</span>
+                        </div>
+                        <a href="#tech-courses" class="btn btn-primary mt-4">Explore Tech</a>
+                    </div>
+                </div>
+
+                <!-- Language Category -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="category-card glass-card hover-scale text-center p-5 h-100">
+                        <div class="icon-box bg-primary-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-language fa-2x text-primary"></i>
+                        </div>
+                        <h3 class="mb-3">Language Programs</h3>
+                        <p class="mb-4">Achieve fluency in English, French, and Kiswahili with our comprehensive language programs</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-primary-light text-dark me-2">9 Programs</span>
+                            <span class="badge bg-primary-light text-dark">3 Languages</span>
+                        </div>
+                        <a href="#language-courses" class="btn btn-primary mt-4">Explore Languages</a>
+                    </div>
+                </div>
+
+                <!-- Music Category -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="category-card glass-card hover-scale text-center p-5 h-100">
+                        <div class="icon-box bg-primary-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fas fa-music fa-2x text-primary"></i>
+                        </div>
+                        <h3 class="mb-3">Music & Arts Programs</h3>
+                        <p class="mb-4">Develop your musical talent with professional training in piano, guitar, and drums</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="badge bg-primary-light text-dark me-2">10 Programs</span>
+                            <span class="badge bg-primary-light text-dark">3 Instruments</span>
+                        </div>
+                        <a href="#music-courses" class="btn btn-primary mt-4">Explore Music</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section id="courses" class="container-xl py-5 bg-light">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Popular Choices</h6>
+                <h1 class="mb-5">Featured Programs</h1>
+                <p class="lead text-muted mb-5">Our most enrolled programs with proven career outcomes and student success</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Full Stack Web Development -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/full stack.jpg" class="img-fluid w-100" alt="Full Stack Web Development">
+                            <div class="course-badge bg-primary">BESTSELLER</div>
+                            <div class="course-overlay">
+                                <a onclick="showCourseDetails('full-stack-dev')" class="btn btn-primary btn-sm rounded-pill px-3">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary-light text-dark"><i class="fas fa-clock me-1"></i> 12 Months</span>
+                                <span class="text-primary"><i class="fas fa-laptop-code me-1"></i> Tech</span>
+                            </div>
+                            <h4 class="mb-3">Full Stack Dev</h4>
+                            <p class="mb-3">Comprehensive training in both front-end and back-end technologies to build complete web applications.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>HTML5, CSS3, JavaScript</li>
+                                <li>React.js frontend framework</li>
+                                <li>Node.js and Express backend</li>
+                                <li>MongoDB database</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                    <small class="text-muted ms-1">(128 reviews)</small>
+                                </div>
+                                <h5 class="text-primary mb-0">250,000 Frw</h5>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between  mt-4">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1 m-2" 
+                                    data-course-id="full-stack-dev" 
+                                    onclick="showCourseDetails('full-stack-dev')">
+                                    <i class="fa fa-info-circle me-1"></i> Details
+                                </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary text-nowrap btn-sm w-auto m-2">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business English Fluency -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/english beg.jpg" class="img-fluid w-100" alt="Business English Fluency">
+                            <div class="course-badge bg-success">NEW</div>
+                            <div class="course-overlay">
+                                <a onclick="showCourseDetails('english-fluency')" class="btn btn-primary btn-sm rounded-pill px-3">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary-light text-dark"><i class="fas fa-clock me-1"></i> 3 Months</span>
+                                <span class="text-primary"><i class="fas fa-language me-1"></i> Language</span>
+                            </div>
+                            <h4 class="mb-3">English Fluency</h4>
+                            <p class="mb-3">Develop professional communication skills for meetings, presentations, and workplace interactions.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Professional vocabulary</li>
+                                <li>Business writing skills</li>
+                                <li>Presentation techniques</li>
+                                <li>Pitching techniques</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="far fa-star text-warning"></i>
+                                    <small class="text-muted ms-1">(87 reviews)</small>
+                                </div>
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1 m-2" 
+                                    data-course-id="english-fluency" 
+                                    onclick="showCourseDetails('english-fluency')">
+                                    <i class="fa fa-info-circle me-1"></i> Details
+                                </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary text-nowrap btn-sm w-auto m-2">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Piano Mastery Program -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/Piano class.jpg" class="img-fluid w-100" alt="Piano Mastery Program">
+                            <div class="course-badge bg-warning">POPULAR</div>
+                            <div class="course-overlay">
+                                <a onclick="showCourseDetails('piano-mastery')" class="btn btn-primary btn-sm rounded-pill px-3">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="badge bg-primary-light text-dark"><i class="fas fa-clock me-1"></i> 6 Months</span>
+                                <span class="text-primary"><i class="fas fa-music me-1"></i> Music</span>
+                            </div>
+                            <h4 class="mb-3">Piano Mastery Program</h4>
+                            <p class="mb-3">From basic chords to advanced compositions with our structured piano training program.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Music theory fundamentals</li>
+                                <li>Sight-reading skills</li>
+                                <li>Chord progressions</li>
+                                <li>Performance techniques</li>
+                            </div><br>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <small class="text-muted ms-1">(64 reviews)</small>
+                                </div>
+                                <h5 class="text-primary mb-0">200,000 Frw</h5>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-primary btn-sm flex-grow-1 m-2" 
+                                    data-course-id="piano-mastery" 
+                                    onclick="showCourseDetails('piano-mastery')">
+                                    <i class="fa fa-info-circle me-1"></i> Details
+                                </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary text-nowrap btn-sm w-auto m-2">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.7s">
+                <a href="#tech-courses" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+                    <i class="fa fa-search me-2"></i> Browse All Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Courses Section -->
+    <section id="tech-courses" class="container-xl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Technology Programs</h6>
+                <h1 class="mb-5">Software Development & IT Courses</h1>
+                <p class="lead text-muted mb-5">Build career-ready tech skills with hands-on projects and expert guidance</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Front-End Development -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/front end.jpg" class="img-fluid w-100" alt="Front-End Development" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-primary">BEGINNER FRIENDLY</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 6 Months</span>
+                                <span class="text-primary"><i class="fas fa-laptop-code me-1"></i> Tech</span>
+                            </div>
+                            <h4 class="mb-3">Front-End Development</h4>
+                            <p class="mb-3">Learn HTML5, CSS3, JavaScript and React to build modern, responsive websites.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Responsive web design</li>
+                                <li>JavaScript fundamentals</li>
+                                <li>React.js framework</li>
+                                <li>UI/UX principles</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">150,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="front-end-dev" 
+                                    onclick="showCourseDetails('front-end-dev')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back-End Development -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/back end.jpg" class="img-fluid w-100" alt="Back-End Development" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-info">INTERMEDIATE</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 6 Months</span>
+                                <span class="text-primary"><i class="fas fa-server me-1"></i> Tech</span>
+                            </div>
+                            <h4 class="mb-3">Back-End Development</h4>
+                            <p class="mb-3">Master Node.js, Express, and MongoDB to build powerful server-side applications.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Node.js fundamentals</li>
+                                <li>Express framework</li>
+                                <li>MongoDB database</li>
+                                <li>API development</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">150,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="back-end-dev" 
+                                    onclick="showCourseDetails('back-end-dev')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ICT Literacy -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/computer lit.jpg" class="img-fluid w-100" alt="ICT Literacy" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-success">ALL LEVELS</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 3 Months</span>
+                                <span class="text-primary"><i class="fas fa-laptop me-1"></i> Tech</span>
+                            </div>
+                            <h4 class="mb-3">Computer Literacy & Digital Skills</h4>
+                            <p class="mb-3">Essential computer skills for the modern workplace and academic success.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Computer fundamentals</li>
+                                <li>Microsoft Office pro</li>
+                                <li>Internet and email</li>
+                                <li>AI Basics</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">120,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="ict-literacy" 
+                                    onclick="showCourseDetails('ict-literacy')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Graphic Design -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/graphic des.jpg" class="img-fluid w-100" alt="Graphic Design" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-warning">CREATIVE</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 3 Months</span>
+                                <span class="text-primary"><i class="fas fa-palette me-1"></i> Design</span>
+                            </div>
+                            <h4 class="mb-3">Graphic Design</h4>
+                            <p class="mb-3">Learn industry-standard tools and principles for creating professional visual designs.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Adobe Photoshop</li>
+                                <li>Adobe Illustrator</li>
+                                <li>Design principles</li>
+                                <li>Branding basics</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">140,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="graphic-design" 
+                                    onclick="showCourseDetails('graphic-design')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud Computing -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/cloud comp.jpg" class="img-fluid w-100" alt="Cloud Computing" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-info">ADVANCED</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 6 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-cloud me-1"></i> Tech</span>
+                            </div>
+                            <h4 class="mb-3">Cloud Computing basics</h4>
+                            <p class="mb-3">Introduction to cloud services, deployment models, and cloud security fundamentals.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Cloud service models</li>
+                                <li>Deployment</li>
+                                <li>Hosting</li>
+                                <li>DNS & Meta tags</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">80,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="cloud-computing" 
+                                    onclick="showCourseDetails('cloud-computing')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Essentials -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/AI ESSENTIAL.jpg" class="img-fluid w-100" alt="AI Essentials" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-danger">NEW</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 4 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-robot me-1"></i> Tech</span>
+                            </div>
+                            <h4 class="mb-3">AI & Machine Learning Essentials</h4>
+                            <p class="mb-3">Introduction to artificial intelligence concepts and practical applications.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>AI fundamentals</li>
+                                <li>Machine learning basics</li>
+                                <li>AI For work</li>
+                                <li>AI Monetization</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">60,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="ai-essentials" 
+                                    onclick="showCourseDetails('ai-essentials')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Courses Section -->
+    <section id="language-courses" class="container-xl py-5 bg-light">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Language Programs</h6>
+                <h1 class="mb-5">Languages Courses</h1>
+                <p class="lead text-muted mb-5">Achieve fluency in essential languages for professional and academic success</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- English Program -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/english beg.jpg" class="img-fluid w-100" alt="English Program" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-primary">ALL LEVELS</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-language me-1"></i> English</span>
+                            </div>
+                            <h4 class="mb-3">English Language</h4>
+                            <p class="mb-3">Comprehensive training in reading, writing, speaking and listening skills.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Listening skills</li>
+                                <li>Speaking skills</li>
+                                <li>Reading skills</li>
+                                <li>Writing skills</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="english-mastery" 
+                                    onclick="showCourseDetails('english-mastery')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- French Program -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/french beg.jpg" class="img-fluid w-100" alt="French Program" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-info">BEGINNER TO ADVANCED</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-language me-1"></i> French</span>
+                            </div>
+                            <h4 class="mb-3">French Language</h4>
+                            <p class="mb-3">Develop practical communication skills for business and travel.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Listening skills</li>
+                                <li>Speaking skills</li>
+                                <li>Reading skills</li>
+                                <li>Writing skills</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="french-fluency" 
+                                    onclick="showCourseDetails('french-fluency')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kiswahili Program -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/kiswahili beginer.jpg" class="img-fluid w-100" alt="Kiswahili Program" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-success">BEGINNER FRIENDLY</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-language me-1"></i> Kiswahili</span>
+                            </div>
+                            <h4 class="mb-3">Kiswahili Language</h4>
+                            <p class="mb-3">Essential communication skills for business and daily interactions.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Listening skills</li>
+                                <li>Speaking skills</li>
+                                <li>Reading skills</li>
+                                <li>Writing skills</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="kiswahili-beginners" 
+                                    onclick="showCourseDetails('kiswahili-beginners')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- English for Business -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/english pro.jpg" class="img-fluid w-100" alt="Business English" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-warning">PROFESSIONAL</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-language me-1"></i> English</span>
+                            </div>
+                            <h4 class="mb-3">English proficiency</h4>
+                            <p class="mb-3">Specialized English training for professionals</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Business vocabulary</li>
+                                <li>Pitching Techniques</li>
+                                <li>Presentation skills</li>
+                                <li>Proficiency Certification</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="english-fluency" 
+                                    onclick="showCourseDetails('english-fluency')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- French for Tourism -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/french pro.jpg" class="img-fluid w-100" alt="French for Tourism" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-info">SPECIALIZED</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-language me-1"></i> French</span>
+                            </div>
+                            <h4 class="mb-3">French proficiency</h4>
+                            <p class="mb-3">Language skills specifically for professionals.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Hospitality vocabulary</li>
+                                <li>Customer service phrases</li>
+                                <li>Cultural awareness</li>
+                                <li>Situation simulations</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="french-tourism" 
+                                    onclick="showCourseDetails('french-tourism')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kiswahili Proficiency -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/kiswahili pro.jpg" class="img-fluid w-100" alt="Kiswahili Proficiency" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-success">PRO</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-language me-1"></i> Kiswahili</span>
+                            </div>
+                            <h4 class="mb-3">Kiswahili Proficiency</h4>
+                            <p class="mb-3">For fluency in Kiswahili for professional use.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Business vocabulary</li>
+                                <li>Pitching Techniques</li>
+                                <li>Presentation skills</li>
+                                <li>Proficiency Certification</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="kiswahili-advanced" 
+                                    onclick="showCourseDetails('kiswahili-advanced')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Courses Section -->
+    <section id="music-courses" class="container-xl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Creative Arts</h6>
+                <h1 class="mb-5">Music Education Programs</h1>
+                <p class="lead text-muted mb-5">Develop your musical talent with professional training from experienced instructors</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Piano Program -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/piano class.jpg" class="img-fluid w-100" alt="Piano Program" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-primary">BEGINNER TO ADVANCED</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 24 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-music me-1"></i> Piano</span>
+                            </div>
+                            <h4 class="mb-3">Piano Mastery Program</h4>
+                            <p class="mb-3">Comprehensive training from basic chords to advanced compositions.</p>
+                            
+                            <div class="program-outcomes mb-5">
+                               
+                                <li>Music theory fundamentals</li>
+                                <li>Sight-reading skills</li>
+                                <li>Chord progressions</li>
+                                <li>Performance techniques</li>
+                                
+                            </div>
+                            
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">200,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="piano-mastery" 
+                                    onclick="showCourseDetails('piano-mastery')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guitar Program -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/Accostic guitar.jpg" class="img-fluid w-100" alt="Guitar Program" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-info">ALL LEVELS</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-music me-1"></i> Guitar</span>
+                            </div>
+                            <h4 class="mb-3">Acoustic Guitar Training</h4>
+                            <p class="mb-3">From strumming basics to advanced fingerstyle techniques.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Basic chords and strumming</li>
+                                <li>Fingerstyle techniques</li>
+                                <li>Music theory for guitar</li>
+                                <li>Song arrangement</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="guitar-training" 
+                                    onclick="showCourseDetails('guitar-training')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drums Program -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/drums class.jpg" class="img-fluid w-100" alt="Drums Program" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-success">BEGINNER FRIENDLY</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-music me-1"></i> Drums</span>
+                            </div>
+                            <h4 class="mb-3">Drumming Fundamentals</h4>
+                            <p class="mb-3">Develop rhythm, coordination and musicality through drumming.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Basic drum patterns</li>
+                                <li>Rhythm development</li>
+                                <li>Drum set techniques</li>
+                                <li>Playing with music</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="drumming-fundamentals" 
+                                    onclick="showCourseDetails('drumming-fundamentals')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bass Guitar -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/solo guitar.jpg" class="img-fluid w-100" alt="Bass Guitar" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-warning">SPECIALIZED</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-music me-1"></i> solo</span>
+                            </div>
+                            <h4 class="mb-3">Solo Guitar training</h4>
+                            <p class="mb-3">Master the foundational instrument that drives the rhythm section.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Bass lines creation</li>
+                                <li>Fingerstyle techniques</li>
+                                <li>Music theory for solo</li>
+                                <li>Playing in a band</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="bass-guitar" 
+                                    onclick="showCourseDetails('bass-guitar')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Music Production -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/bass guitar.jpg" class="img-fluid w-100" alt="Music Production" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-danger">NEW</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-headphones me-1"></i> Bass</span>
+                            </div>
+                            <h4 class="mb-3">Bass Guitar training</h4>
+                            <p class="mb-3">Laster the foundational instrument that drives the rhythm section.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>Bass lines creation</li>
+                                <li>Fingerstyle techniques</li>
+                                <li>Music theory for solo</li>
+                                <li>Playing in a band</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="music-production" 
+                                    onclick="showCourseDetails('music-production')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vocal Training -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+                        <div class="position-relative">
+                            <img src="img/music pro.jpg" class="img-fluid w-100" alt="Vocal Training" style="height: 200px; object-fit: cover;">
+                            <div class="course-badge bg-info">POPULAR</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="program-duration"><i class="fas fa-clock me-1"></i> 16 Weeks</span>
+                                <span class="text-primary"><i class="fas fa-microphone me-1"></i> Production</span>
+                            </div>
+                            <h4 class="mb-3">Audio Production</h4>
+                            <p class="mb-3">Make music which can change the world with unique ideas and techniques.</p>
+                            
+                            <div class="program-outcomes mb-3">
+                                <li>MIDI control</li>
+                                <li>Beat making</li>
+                                <li>Mixing and Mastering</li>
+                                <li>Vocal arrangement</li>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="text-primary mb-0">350,000 Frw</h5>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                    data-course-id="vocal-training" 
+                                    onclick="showCourseDetails('vocal-training')">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Benefits Section 
+    <section class="container-xxl py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-center text-primary px-3">Why Choose Us</h6>
+                    <h1 class="mb-4">The MasteryHub Advantage</h1>
+                    <p class="mb-4">We provide more than just courses - we offer a complete learning ecosystem designed for your success.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-chalkboard-teacher fa-lg mt-2"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Expert Instructors</h5>
+                                    <p class="mb-0">Industry professionals with real-world experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-briefcase fa-lg mt-2"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Career Support</h5>
+                                    <p class="mb-0">Resume building and job placement assistance</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-project-diagram fa-lg mt-2"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Project-Based</h5>
+                                    <p class="mb-0">Build portfolio-worthy projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-certificate fa-lg mt-2"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Certification</h5>
+                                    <p class="mb-0">Earn recognized certificates</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-users fa-lg mt-2"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Small Class Sizes</h5>
+                                    <p class="mb-0">Personalized attention</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-laptop-code fa-lg mt-2"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Modern Facilities</h5>
+                                    <p class="mb-0">State-of-the-art equipment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/learning-environment.jpg" alt="Learning at MasteryHub">
+                        <div class="position-absolute top-0 start-0 bg-primary opacity-75 w-100 h-100"></div>
+                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <a href="https://www.youtube.com/watch?v=yourvideo" class="btn btn-light btn-lg rounded-circle" style="width: 70px; height: 70px;">
+                                <i class="fas fa-play text-primary"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Testimonials Section -->
+    <section class="container-xl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Success Stories</h6>
+                <h1 class="mb-5">What Our Students Say</h1>
+            </div>
+            
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-light text-dark p-4 mb-4">
+                        <p class="mb-3">The web development course transformed my career. I went from zero coding experience to landing a junior developer position in just 6 months!</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle me-3" src="img/Alice.U.jpg" alt="Alice U.">
+                        <div>
+                            <h5 class="mb-1">Alice U.</h5>
+                            <p class="m-0">Web Development Graduate</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-light text-dark p-4 mb-4">
+                        <p class="mb-3">The Business English program helped me gain confidence in professional settings. I've since been promoted to a customer-facing role at my company.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle me-3" src="img/Jean.P.jpg" alt="Jean P.">
+                        <div>
+                            <h5 class="mb-1">Jean P.</h5>
+                            <p class="m-0">English Program Graduate</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-light text-dark p-4 mb-4">
+                        <p class="mb-3">As a music teacher, I wanted to improve my piano skills. The structured approach at MasteryHub helped me reach new levels in my playing.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle me-3" src="img/David.k.avif" alt="David K.">
+                        <div>
+                            <h5 class="mb-1">David K.</h5>
+                            <p class="m-0">Piano Program Graduate</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-light text-dark p-4 mb-4">
+                        <p class="mb-3">The ICT literacy course was exactly what I needed to transition from manual work to an office job. The practical skills made all the difference.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle me-3" src="img/Marie.C" alt="Marie C.">
+                        <div>
+                            <h5 class="mb-1">Marie C.</h5>
+                            <p class="m-0">ICT Graduate</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-text position-relative bg-light text-dark p-4 mb-4">
+                        <p class="mb-3">The French language program gave me the confidence to apply for jobs in Francophone countries. I now work for an international NGO.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle me-3" src="img/Eric.M" alt="Eric M.">
+                        <div>
+                            <h5 class="mb-1">Eric M.</h5>
+                            <p class="m-0">French Program Graduate</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section 
+    <section class="container-xxl py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-4">Ready to Transform Your Skills?</h1>
+                    <p class="mb-4">Join hundreds of students who have launched successful careers through our programs. Take the first step today.</p>
+                    <a href="https://form.jotform.com/250560825113045" class="btn btn-light btn-lg rounded-pill px-4 py-2 me-2">Enroll Now</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-4 py-2">Contact Us</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white rounded p-4">
+                        <h4 class="text-primary mb-4">Have Questions?</h4>
+                        <form id="course-inquiry-form">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <input type="text" class="form-control border-0 py-3" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" class="form-control border-0 py-3" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select border-0 py-3" required>
+                                        <option value="" selected disabled>Select Course</option>
+                                        <option>Web Development</option>
+                                        <option>ICT Literacy</option>
+                                        <option>English Language</option>
+                                        <option>French Language</option>
+                                        <option>Piano Classes</option>
+                                        <option>Guitar Training</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control border-0 py-3" rows="3" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit Question</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+<!-- Partners Section -->
+<section class="partners-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5 wow fadeIn">
+            <h6 class="section-title bg-white text-center text-primary px-3">Our Partners</h6>
+            <h2>Trusted By Industry Leaders</h2>
+        </div>
+
+        <div class="partner-logos">
+            <div class="partner-track">
+                <!-- Duplicate this set for seamless looping -->
+                <div class="partner-item">
+                    <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
+                </div>
+                <!-- Add 6-10 partner logos -->
+            </div>
+        
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn liquid-bg floating card-3d gradient-border" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="studentsProjects.html">Our Peers portfolios</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#">Terms & Condition</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><a class="text-white text-decoration-underline" target="_blank" href="https://maps.app.goo.gl/RcMRjjPjfumutn9B7">KG 31 Ave, Kigali-Kinyinya</a></p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="text-white text-decoration-underline" href="tel:+250782228575">(+250) 782 228 575</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto:info@masteryhub.co.rw" class="text-decoration-underline text-white">info@masteryhub.co.rw</a></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://x.com/masteryhub_Rwa"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://wa.me/message/J2W6LE7QIQZHI1"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.instagram.com/mastery_hub_of_rwanda/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.linkedin.com/company/mastery-hub-of-rwanda"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR1-min.jpg" alt="masteryhub Web development class">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR2-min.jpg" alt="masteryhub Web development class">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR3-min.jpg" alt="backend-development ast masteryhub">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR4-min.jpg" alt="masteryhubcourse3">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR5-min.jpg" alt="masteryhubcourse4">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR6-min.jpg" alt="masteryhub-course5">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Subscribe to our weekly Newslatter, Where we talk about trending technologies</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-1" onclick="alert('Thank You for Subscribing to our News Latter You will be recieving our Email on Weekly basis!')">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html" style="color: rgb(237, 237, 115);">Mastery Hub Of Rwanda</a> All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Enroll Button -->
+    <a href="https://form.jotform.com/250560825113045" class="btn btn-primary floating-enroll-btn">
+        <i class="fas fa-user-plus me-2"></i> Enroll Now
+    </a> 
+
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize counter animation
+        $('[data-toggle="counter-up"]').counterUp({
+            delay: 10,
+            time: 1000
+        });
+        
+        // Initialize testimonial carousel
+        $('.testimonial-carousel').owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            margin: 30,
+            dots: true,
+            loop: true,
+            center: true,
+            responsive: {
+                0:{ items:1 },
+                576:{ items:1 },
+                768:{ items:2 },
+                992:{ items:3 }
+            }
+        });
+
+        
+
+        // Form submission
+        $('#course-inquiry-form').submit(function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+
+    <!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<!-- Add the force-fix script here -->
+<script>
+// Force mobile navigation fixes
+document.addEventListener('DOMContentLoaded', function() {
+    // Fix for navbar toggler
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+        });
+    }
+    
+    // Force dropdown toggle on mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991.98) {
+                e.preventDefault();
+                const dropdownMenu = this.nextElementSibling;
+                dropdownMenu.classList.toggle('show');
+                
+                // Close other open dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+                    if (menu !== dropdownMenu) {
+                        menu.classList.remove('show');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991.98) {
+            if (!e.target.matches('.dropdown-toggle') && !e.target.closest('.dropdown-menu')) {
+                document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+                    menu.classList.remove('show');
+                });
+            }
+        }
+    });
+});
+</script>
+    <!-- Course Details Modal -->
+    <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseDetailsModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="courseDetailsContent">
+                    <!-- Content will be loaded here dynamically -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="https://form.jotform.com/250560825113045" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>

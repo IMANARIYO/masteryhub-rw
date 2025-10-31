@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DMY5F8TGS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8DMY5F8TGS');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Mastery Hub | Student Projects Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mastery Hub student projects, IT student portfolios, Rwanda tech students, software development projects">
+    <meta name="description" content="View impressive projects from Mastery Hub students in software development, UI/UX design, and graphic design. See their portfolios and skills.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mastery Hub of Rwanda">
+    <meta property="og:title" content="Mastery Hub Student Projects | Rwanda Tech Talent">
+    <meta property="og:description" content="Explore outstanding projects from Mastery Hub students in software development and design fields.">
+    <meta property="og:image" content="https://masteryhub.co.rw/img/logo.png">
+    <meta property="og:url" content="https://masteryhub.co.rw/studentsProjects.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mastery Hub Student Projects | Rwanda Tech Talent">
+    <meta name="twitter:description" content="Showcase of impressive projects from Mastery Hub students in various tech disciplines.">
+    <meta name="twitter:image" content="https://masteryhub.co.rw/img/logo.png">
+    <link rel="icon" href="img/logo.png">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Projects Page Specific Styles -->
+    <style>
+        :root {
+            --primary: #04a34c;
+            --primary-dark: #04632e;
+            --primary-light: #88d96f;
+            --secondary: #11482a;
+            --light: #F0FBFC;
+            --dark: #0e4a20;
+            --white: #ffffff;
+            --black: #000000;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-500: #adb5bd;
+            --gray-700: #495057;
+            --gray-900: #212529;
+        }
+
+        /* Project Cards */
+        .project-card {
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(4, 163, 76, 0.1) 0%, rgba(4, 163, 76, 0.2) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(4, 163, 76, 0.15);
+            border-color: var(--primary);
+        }
+
+        /* Student Images */
+        .student-img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .student-img {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(4, 163, 76, 0.3);
+        }
+
+        /* Content Styling */
+        .student-name {
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+            color: var(--dark);
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+
+        .student-role {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Filter Buttons */
+        .filter-container {
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+        }
+
+        .filter-btn:hover, 
+        .filter-btn.active {
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(4, 163, 76, 0.2);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(24, 29, 56, 0.8), rgba(24, 29, 56, 0.8)), url(img/carousel-1.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Pagination */
+        .pagination .page-item .page-link {
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .pagination .page-item.active .page-link {
+            background: var(--gradient-primary);
+            border-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .pagination .page-item:hover .page-link {
+            background: rgba(4, 163, 76, 0.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1199.98px) {
+            .student-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .page-header {
+                padding: 80px 0;
+            }
+            
+            .page-title {
+                font-size: 2.2rem;
+            }
+            
+            .student-name {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .page-header {
+                padding: 60px 0;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-card {
+                padding: 20px;
+            }
+            
+            .student-img {
+                width: 100px;
+                height: 100px;
+                border-width: 3px;
+            }
+            
+            .filter-btn {
+                padding: 6px 15px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .page-header {
+                padding: 50px 0;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+            }
+            
+            .student-name {
+                font-size: 0.95rem;
+            }
+            
+            .student-role {
+                font-size: 0.8rem;
+                margin-bottom: 15px;
+            }
+            
+            .filter-container {
+                gap: 8px;
+            }
+        }
+
+        /* Animation Enhancements */
+        @keyframes fadeInUpScale {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .wow.fadeInUp {
+            animation-name: fadeInUpScale;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+   <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+           <img src="img/MHR LOGO.png" width="90" alt="mhr Logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="softwaredev.html" class="dropdown-item">Software Development</a>
+                        <a href="internership.html" class="dropdown-item">Internship</a>
+                        <a href="training.html" class="dropdown-item">Training </a>
+                        <a href="consultancy.html" class="dropdown-item">Tech Consultancy</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+           <a href="https://form.jotform.com/250560825113045" target="_blank" class="join-button btn py-4 px-lg-5  d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="page-title mb-4 animated slideInDown">Our Students' Projects</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Projects</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Student Projects Start -->
+    <div class="container-xl py-5">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="filter-container">
+                    <button class="btn filter-btn active" data-filter="all">All Students</button>
+                    <button class="btn filter-btn" data-filter="full">Developers</button>
+                    <button class="btn filter-btn" data-filter="ui">UI/UX Designers</button>
+                    <button class="btn filter-btn" data-filter="graphic">Graphic Designers</button>
+                </div>
+            </div>
+
+            <!-- Student Grid -->
+            <div class="row g-4">
+                <!-- Student 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/regis.jpg" alt="UWIMPUHWE Regis">
+                        <h5 class="student-name">UWIMPUHWE Regis</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://santanaitx780.github.io/MY-PF/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 2 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/Lucky.jpg" alt="MFURANZIMA GATWAZA Lucky">
+                        <h5 class="student-name">MFURANZIMA GATWAZA Lucky</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://luckygatwaza.github.io/my-portifolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 3 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/bosco.jpg" alt="TUYISHIMIRE BOSCO">
+                        <h5 class="student-name">TUYISHIMIRE BOSCO</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://tuyishimiretb.github.io/tb/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 4 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/BONFILS.jpg" alt="BONFILS KAMUGISHA">
+                        <h5 class="student-name">BONFILS KAMUGISHA</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://bonfilsdev.github.io/My__portfolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 5 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/betty.jpg" alt="UWASE BETTY">
+                        <h5 class="student-name">UWASE BETTY</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://uwasebetty.github.io/my-portfolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 6 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/benjamin.jpg" alt="UWIRAGIYE NTWARI BENJAMIN">
+                        <h5 class="student-name">UWIRAGIYE NTWARI BENJAMIN</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://ntwali55.github.io/mp/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 7 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/EMMY.jpg" alt="NTIVUGURUZWA EMMANUEL">
+                        <h5 class="student-name">NTIVUGURUZWA EMMANUEL</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://realtemminator.github.io/writer/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 8 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/blaise.jpg" alt="BLAISE NSANGA">
+                        <h5 class="student-name">BLAISE NSANGA</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://blaisensanga.github.io/Basic-Portifolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 9 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/joseph.jpg" alt="UMUGISHA JOSEPH">
+                        <h5 class="student-name">UMUGISHA JOSEPH</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://mugisha857.github.io/Joseph/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 10 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/esperance.jpg" alt="NIWEMAHORO ESPERANCE">
+                        <h5 class="student-name">NIWEMAHORO ESPERANCE</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://niwemahoroesp.github.io/niw/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 11 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/therese.jpg" alt="THERESE MUHAWENIMANA">
+                        <h5 class="student-name">THERESE MUHAWENIMANA</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://theresemu.github.io/my-portfolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 12 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/clara2.jpg" alt="CLARISSE MUTUYIMANA">
+                        <h5 class="student-name">CLARISSE MUTUYIMANA</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://Claradev004.github.io/my-portfolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 13 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/delphine.jpg" alt="UWINEZA ADELPHINE">
+                        <h5 class="student-name">UWINEZA ADELPHINE</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://uwineze2hoster.github.io/uwi/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 14 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/ruth.jpg" alt="TUYISENGE RUTH">
+                        <h5 class="student-name">TUYISENGE RUTH</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://ruthkaranganwa.github.io/ruth/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 15 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/uwineza.jpg" alt="JUSTINE UWINEZA">
+                        <h5 class="student-name">JUSTINE UWINEZA</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://uwineza3566.github.io/my-portfolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 16 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/florance.jpg" alt="INGABIRE FLORENCE">
+                        <h5 class="student-name">INGABIRE FLORENCE</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://ingabire3hoster.github.io/my_-portofolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 17 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/libina 1.jpg" alt="MURAGIJIMANA LIBINA">
+                        <h5 class="student-name">MURAGIJIMANA LIBINA</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://libina250.github.io/my-portfolio1/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Student 18 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" data-category="full,ui">
+                    <div class="project-card">
+                        <img class="student-img" src="img/JOSE.jpg" alt="ISUBIRIZIGIHE JOSELYNE">
+                        <h5 class="student-name">ISUBIRIZIGIHE JOSELYNE</h5>
+                        <p class="student-role">Full-Stack Developer</p>
+                        <a href="https://joselynehoster.github.io/my-portfolio/" target="_blank" class="btn btn-primary btn-sm">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="text-center wow fadeInUp mt-5" data-wow-delay="0.1s">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Student Projects End -->
+
+ <!-- Partners Section -->
+<section class="partners-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5 wow fadeIn">
+            <h6 class="section-title bg-white text-center text-primary px-3">Our Partners</h6>
+            <h2>Trusted By Industry Leaders</h2>
+        </div>
+
+        <div class="partner-logos">
+            <div class="partner-track">
+                <!-- Duplicate this set for seamless looping -->
+                <div class="partner-item">
+                    <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
+                </div>
+                <div class="partner-item">
+                    <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
+                </div>
+                <!-- Add 6-10 partner logos -->
+            </div>
+        
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn liquid-bg floating card-3d gradient-border" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="studentsProjects.html">Our Peers portfolios</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="#">Terms & Condition</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><a class="text-white text-decoration-underline" target="_blank" href="https://maps.app.goo.gl/RcMRjjPjfumutn9B7">KG 31 Ave, Kigali-Kinyinya</a></p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a class="text-white text-decoration-underline" href="tel:+250782228575">(+250) 782 228 575</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto:info@masteryhub.co.rw" class="text-decoration-underline text-white">info@masteryhub.co.rw</a></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://x.com/masteryhub_Rwa"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://wa.me/message/J2W6LE7QIQZHI1"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.instagram.com/mastery_hub_of_rwanda/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.linkedin.com/company/mastery-hub-of-rwanda"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR1-min.jpg" alt="masteryhub Web development class">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR2-min.jpg" alt="masteryhub Web development class">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR3-min.jpg" alt="backend-development ast masteryhub">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR4-min.jpg" alt="masteryhubcourse3">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR5-min.jpg" alt="masteryhubcourse4">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/MHR6-min.jpg" alt="masteryhub-course5">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Subscribe to our weekly Newslatter, Where we talk about trending technologies</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-1" onclick="alert('Thank You for Subscribing to our News Latter You will be recieving our Email on Weekly basis!')">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html" style="color: rgb(237, 237, 115);">Mastery Hub Of Rwanda</a> All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Floating Enroll Button -->
+    <a href="https://form.jotform.com/250560825113045" class="btn btn-primary floating-enroll-btn">
+        <i class="fas fa-user-plus me-2"></i> Register now!
+    </a> 
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Projects Page JavaScript -->
+    <script>
+        // Filter functionality
+        $(document).ready(function() {
+            $('.filter-btn').click(function() {
+                // Update active button
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                const filter = $(this).data('filter');
+                
+                if (filter === 'all') {
+                    $('.row > div').fadeIn(300);
+                } else {
+                    $('.row > div').hide();
+                    $(`.row > div[data-category*="${filter}"]`).fadeIn(300);
+                }
+                
+                // Re-trigger animations
+                new WOW().init();
+            });
+        });
+
+        // Enhanced card hover effect
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Calculate center
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // Calculate angle for gradient
+                const angle = Math.atan2(y - centerY, x - centerX) * 180 / Math.PI;
+                
+                // Apply dynamic gradient
+                card.style.background = `
+                    linear-gradient(
+                        ${angle}deg,
+                        rgba(4, 163, 76, 0.1) 0%,
+                        rgba(4, 163, 76, 0.05) 50%,
+                        #ffffff 100%
+                    )
+                `;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.background = '#ffffff';
+            });
+        });
+
+        // Initialize WOW.js
+        new WOW().init();
+    </script>
+</body>
+</html>
