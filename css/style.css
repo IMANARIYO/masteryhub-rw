@@ -90,6 +90,7 @@ body {
     background: var(--gradient-primary);
     color: #FFFFFF;
     box-shadow: 0 4px 15px rgba(6, 187, 204, 0.3);
+    text-wrap: nowrap;
 }
 
 .btn.btn-primary:hover {
