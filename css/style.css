@@ -309,6 +309,7 @@ body {
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 @media (max-width: 768px) {
     .header-carousel h1 {
         font-size: 2.5rem;
@@ -746,6 +747,7 @@ h1, h2, h3, h4, h5, h6 {
     .section-title::after {
         display: none;
     }
+        
     
     .service-item {
         margin-bottom: 30px;
@@ -1051,6 +1053,13 @@ body {
     
     .service-item {
         margin-bottom: 20px;
+    }
+    .trust-seal{
+        
+        object-fit: cover;
+        width: 100vw;
+        border: none;
+        outline: none;
     }
 }
 
@@ -2397,3 +2406,13 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: translateY(-2px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
+
+
+    .trust-seal{
+        padding-top: 20px;
+        object-fit: cover;
+        width: 15vw;
+        padding-bottom: 0px;
+        border: none;
+        outline: none;
+    }

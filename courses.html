@@ -101,8 +101,6 @@
             font-weight: 600;
         }
 
-
-        
         /* Program Outcomes */
         .program-outcomes {
             list-style-type: none;
@@ -190,133 +188,298 @@
             margin-top: auto;
         }
 
-        /* Force mobile navigation fixes */
-@media (max-width: 991.98px) {
-    /* Fix navbar toggler alignment */
-    .navbar-toggler {
-        margin-right: 0.5rem;
-        padding: 0.25rem 0.5rem;
-    }
-    
-    .ifoto{
-        visibility: block;
-        width: 100%;
-        position: absolute;
-
-    }
-    .overlay-content{
+        /* Scholarship Badge */
+        .scholarship-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #04a34c, #81ff87);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(26, 92, 255, 0.3);
+            transition: all 0.3s ease;
+            margin: 5px 0;
+        }
         
-        z-index: 2;
-        padding-top: 5rem;
-        position: absolute;
-        bottom: 20%;
-        margin-bottom: 0;
-        padding-left: 1rem;
-    }
+        .scholarship-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 92, 255, 0.4);
+        }
+        
+        .scholarship-badge::before {
+            content: "🎓";
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .scholarship-badge::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+        
+        /* Scholarship Price Tag */
+        .scholarship-tag {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 2px dashed #04a34c;
+        }
+        
+        .scholarship-tag .scholarship-icon {
+            font-size: 24px;
+            color: #04a34c;
+            margin-bottom: 8px;
+        }
+        
+        .scholarship-tag .scholarship-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #04a34c;
+            margin: 0;
+        }
+        
+        .scholarship-tag .scholarship-subtext {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        /* Scholarship Banner */
+        .scholarship-banner {
+            background: linear-gradient(135deg, #04a34c 0%, #8cf5c0 100%);
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scholarship-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,255,255,0.1)" d="M0,0 L100,0 L100,100 Z"/></svg>');
+            background-size: cover;
+        }
+        
+        .scholarship-banner-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .scholarship-banner h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .scholarship-banner p {
+            font-size: 16px;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+        
+        /* Scholarship Info Card */
+        .scholarship-info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #04a34c;
+        }
+        
+        .scholarship-info-card h4 {
+            color: #04a34c;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .scholarship-info-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
 
+        /* Force mobile navigation fixes */
+        @media (max-width: 991.98px) {
+            /* Fix navbar toggler alignment */
+            .navbar-toggler {
+                margin-right: 0.5rem;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .ifoto{
+                visibility: block;
+                width: 100%;
+                position: absolute;
+            }
+            
+            .overlay-content{
+                z-index: 2;
+                padding-top: 5rem;
+                position: absolute;
+                bottom: 20%;
+                margin-bottom: 0;
+                padding-left: 1rem;
+            }
 
-    /* Ensure dropdowns work in mobile */
-    .navbar-collapse {
-        padding: 1rem 0;
-    }
-    
-    .dropdown-menu {
-        position: static !important;
-        float: none;
-        width: auto;
-        margin-top: 0;
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
-    }
-    
-    .dropdown-item {
-        padding: 0.5rem 1.5rem;
-        color: rgba(0, 0, 0, 0.7);
-        font-weight: 500;
-    }
-    
-    .dropdown-item:hover,
-    .dropdown-item:focus {
-        color: var(--primary);
-        background-color: transparent;
-    }
-    
-    /* Fix for THE SEMICOLON dropdown */
-    .nav-item.dropdown .nav-link.dropdown-toggle::after {
-        display: inline-block;
-        margin-left: 0.255em;
-        vertical-align: 0.255em;
-        content: "";
-        border-top: 0.3em solid;
-        border-right: 0.3em solid transparent;
-        border-bottom: 0;
-        border-left: 0.3em solid transparent;
-    }
-}
+            /* Ensure dropdowns work in mobile */
+            .navbar-collapse {
+                padding: 1rem 0;
+            }
+            
+            .dropdown-menu {
+                position: static !important;
+                float: none;
+                width: auto;
+                margin-top: 0;
+                background-color: transparent;
+                border: 0;
+                box-shadow: none;
+            }
+            
+            .dropdown-item {
+                padding: 0.5rem 1.5rem;
+                color: rgba(0, 0, 0, 0.7);
+                font-weight: 500;
+            }
+            
+            .dropdown-item:hover,
+            .dropdown-item:focus {
+                color: var(--primary);
+                background-color: transparent;
+            }
+            
+            /* Fix for THE SEMICOLON dropdown */
+            .nav-item.dropdown .nav-link.dropdown-toggle::after {
+                display: inline-block;
+                margin-left: 0.255em;
+                vertical-align: 0.255em;
+                content: "";
+                border-top: 0.3em solid;
+                border-right: 0.3em solid transparent;
+                border-bottom: 0;
+                border-left: 0.3em solid transparent;
+            }
+            
+            /* Mobile scholarship badge adjustments */
+            .scholarship-badge {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            
+            .scholarship-tag {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    
-
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <img src="img/MHR LOGO.png" width="90" alt="mhr Logo">
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link">About Us</a>
-            <a href="courses.html" class="nav-item nav-link active">Courses</a>
-            <div class="nav-item dropdown">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/MHR LOGO.png" width="90" alt="mhr Logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="https://codeforimpact.rw" target="_blank" rel="noopener noreferrer" class="py-md-3 px-md-5 me-3 animated slideInLeft" aria-label="Know More (opens in new tab)">
+                    Code For Impact<i class="fas fa-external-link-alt ms-2" aria-hidden="true"></i>
+                </a>
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="courses.html" class="nav-item nav-link active">Courses</a>
+                <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                <div class="dropdown-menu fade-down m-0">
-                    <a href="softwaredev.html" class="dropdown-item">Software Development</a>
-                    <a href="internership.html" class="dropdown-item">Internship</a>
-                    <a href="training.html" class="dropdown-item">Training </a>
-                    <a href="consultancy.html" class="dropdown-item">Tech Consultancy</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="softwaredev.html" class="dropdown-item">Software Development</a>
+                        <a href="internership.html" class="dropdown-item">Internship</a>
+                        <a href="training.html" class="dropdown-item">Training </a>
+                        <a href="consultancy.html" class="dropdown-item">Tech Consultancy</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="https://form.jotform.com/250560825113045" target="_blank" class="join-button btn py-4 px-lg-5 d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+
+    <!-- Scholarship Banner -->
+    <section class="scholarship-banner">
+        <div class="container">
+            <div class="row align-items-center scholarship-banner-content">
+                <div class="col-lg-8">
+                    <h3><i class="fas fa-graduation-cap me-2"></i>Scholarship Opportunities Available</h3>
+                    <p>Merit-based and financial aid scholarships for all programs. Contact us to learn about eligibility and application process.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#tech-courses" class="btn btn-light btn-lg rounded-pill px-4">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </a>
                 </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
-       <a href="https://form.jotform.com/250560825113045" target="_blank" class="join-button btn py-4 px-lg-5  d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
-    </div>
-</nav>
+    </section>
 
-<!-- Replace your entire hero carousel section with this -->
-<section class="hero-section position-relative overflow-hidden">
-    <!-- Video Background -->
-
-    <div class="">
-        <div class="w-100 bg-light ifoto float-end">
-            <img src="img/masteryhubanime-bgless.gif" width="40%" object-fit="contain" alt="Loading..." class="loading-image ifoto float-end">
-
+    <!-- Replace your entire hero carousel section with this -->
+    <section class="hero-section position-relative overflow-hidden">
+        <!-- Video Background -->
+        <div class="">
+            <div class="w-100 bg-light ifoto float-end">
+                <img src="img/masteryhubanime-bgless.gif" width="40%" object-fit="contain" alt="Loading..." class="loading-image ifoto float-end">
+            </div>
+            
+            <!-- Overlay -->
+            <div class="video-overlay"></div>
         </div>
         
-        <!-- Overlay -->
-        <div class="video-overlay"></div>
-    </div>
-    
-    <!-- Content Container -->
-    <div class="content-container position-absolute top-0 w-100 h-100  d-flex align-items-center">
-        <div class="container overlay-content">
-            <div class="row justify-content-start">
-                <div class="col-lg-8 text-start">
-                    <h1 class="display-3 text-white mb-4 animated slideInDown">Master In-Demand Skills</h1>
-                    <p class="fs-5 text-white mb-4 animated slideInDown">Professional training programs in technology, languages, and music</p>
-                    <div class="d-flex gap-3 animated slideInDown">
-                        <a href="#courses" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Explore Courses</a>
-                        <a href="#categories" class="btn btn-light btn-lg rounded-pill px-4 py-2">Browse Categories</a>
+        <!-- Content Container -->
+        <div class="content-container position-absolute top-0 w-100 h-100 d-flex align-items-center">
+            <div class="container overlay-content">
+                <div class="row justify-content-start">
+                    <div class="col-lg-8 text-start">
+                        <h1 class="display-3 text-white mb-4 animated slideInDown">Master In-Demand Skills</h1>
+                        <p class="fs-5 text-white mb-4 animated slideInDown">Professional training programs in technology, languages, and music</p>
+                        <div class="d-flex gap-3 animated slideInDown">
+                            <a href="#courses" class="btn btn-primary btn-lg rounded-pill px-4 py-2">Explore Courses</a>
+                            <a href="#categories" class="btn btn-light btn-lg rounded-pill px-4 py-2">Browse Categories</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Stats Bar -->
     <div class="container-fluid bg-primary py-5">
         <div class="container">
@@ -437,19 +600,16 @@
                                 <li>MongoDB database</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="rating">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star-half-alt text-warning"></i>
-                                    <small class="text-muted ms-1">(128 reviews)</small>
+                            <!-- Scholarship Badge -->
+                            <div class="scholarship-tag">
+                                <div class="scholarship-icon">
+                                    <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <h5 class="text-primary mb-0">250,000 Frw</h5>
+                                <p class="scholarship-text">Scholarship Available</p>
+                                <p class="scholarship-subtext">Merit-based & Financial Aid</p>
                             </div>
                             
-                            <div class="d-flex justify-content-between  mt-4">
+                            <div class="d-flex justify-content-between mt-4">
                                 <button class="btn btn-outline-primary btn-sm flex-grow-1 m-2" 
                                     data-course-id="full-stack-dev" 
                                     onclick="showCourseDetails('full-stack-dev')">
@@ -488,16 +648,13 @@
                                 <li>Pitching techniques</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="rating">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="far fa-star text-warning"></i>
-                                    <small class="text-muted ms-1">(87 reviews)</small>
+                            <!-- Scholarship Badge -->
+                            <div class="scholarship-tag">
+                                <div class="scholarship-icon">
+                                    <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                                <p class="scholarship-text">Scholarship Available</p>
+                                <p class="scholarship-subtext">Merit-based & Financial Aid</p>
                             </div>
                             
                             <div class="d-flex justify-content-between mt-4">
@@ -537,18 +694,15 @@
                                 <li>Sight-reading skills</li>
                                 <li>Chord progressions</li>
                                 <li>Performance techniques</li>
-                            </div><br>
+                            </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="rating">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <small class="text-muted ms-1">(64 reviews)</small>
+                            <!-- Scholarship Badge -->
+                            <div class="scholarship-tag">
+                                <div class="scholarship-icon">
+                                    <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <h5 class="text-primary mb-0">200,000 Frw</h5>
+                                <p class="scholarship-text">Scholarship Available</p>
+                                <p class="scholarship-subtext">Merit-based & Financial Aid</p>
                             </div>
                             
                             <div class="d-flex justify-content-between mt-4">
@@ -584,6 +738,44 @@
             </div>
 
             <div class="row g-4">
+
+                <!-- Software Engineering Fundamentals (FREE) -->
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+        <div class="position-relative">
+            <img src="img/SE FUND.png" class="img-fluid w-100" alt="Software Engineering Fundamentals" style="height: 200px; object-fit: cover;">
+            <div class="course-badge bg-success">FREE</div>
+        </div>
+        <div class="p-4">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="program-duration"><i class="fas fa-clock me-1"></i> 8 Weeks</span>
+                <span class="text-primary"><i class="fas fa-laptop-code me-1"></i> Tech</span>
+            </div>
+            <h4 class="mb-3">Software Engineering Fundamentals (FREE)</h4>
+            <p class="mb-3">Introduction to core software engineering principles, development methodologies, and best practices.</p>
+            
+            <div class="program-outcomes mb-3">
+                <li>SDLC methodologies</li>
+                <li>Agile & Scrum basics</li>
+                <li>Version control with Git</li>
+            </div>
+            
+            <!-- Scholarship Badge -->
+            <span class="scholarship-badge">Scholarship Available</span>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <button class="btn btn-sm btn-outline-primary" 
+                    data-course-id="software-eng-fundamentals" 
+                    onclick="showCourseDetails('software-eng-fundamentals')">
+                    Details
+                </button>
+                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
                 <!-- Front-End Development -->
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
@@ -606,13 +798,18 @@
                                 <li>UI/UX principles</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">150,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="front-end-dev" 
                                     onclick="showCourseDetails('front-end-dev')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -640,13 +837,18 @@
                                 <li>API development</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">150,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="back-end-dev" 
                                     onclick="showCourseDetails('back-end-dev')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -656,7 +858,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
                         <div class="position-relative">
-                            <img src="img/computer lit.jpg" class="img-fluid w-100" alt="ICT Literacy" style="height: 200px; object-fit: cover;">
+                            <img src="img/Isangemo.png" class="img-fluid w-100" alt="ICT Literacy" style="height: 200px; object-fit: cover;">
                             <div class="course-badge bg-success">ALL LEVELS</div>
                         </div>
                         <div class="p-4">
@@ -664,23 +866,28 @@
                                 <span class="program-duration"><i class="fas fa-clock me-1"></i> 3 Months</span>
                                 <span class="text-primary"><i class="fas fa-laptop me-1"></i> Tech</span>
                             </div>
-                            <h4 class="mb-3">Computer Literacy & Digital Skills</h4>
-                            <p class="mb-3">Essential computer skills for the modern workplace and academic success.</p>
+                            <h4 class="mb-3">IsangeMO Program</h4>
+                            <p class="mb-3">Essential computer skills for the modern workplace and academic success designed to boost essential skills.</p>
                             
                             <div class="program-outcomes mb-3">
-                                <li>Computer fundamentals</li>
+                                <li>Computer literacy</li>
                                 <li>Microsoft Office pro</li>
                                 <li>Internet and email</li>
-                                <li>AI Basics</li>
+                                <li>AI fundamentals</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">120,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="ict-literacy" 
                                     onclick="showCourseDetails('ict-literacy')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -708,13 +915,18 @@
                                 <li>Branding basics</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">140,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="graphic-design" 
                                     onclick="showCourseDetails('graphic-design')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -732,7 +944,7 @@
                                 <span class="program-duration"><i class="fas fa-clock me-1"></i> 6 Weeks</span>
                                 <span class="text-primary"><i class="fas fa-cloud me-1"></i> Tech</span>
                             </div>
-                            <h4 class="mb-3">Cloud Computing basics</h4>
+                            <h4 class="mb-3">Cloud Computing</h4>
                             <p class="mb-3">Introduction to cloud services, deployment models, and cloud security fundamentals.</p>
                             
                             <div class="program-outcomes mb-3">
@@ -742,13 +954,18 @@
                                 <li>DNS & Meta tags</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">80,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="cloud-computing" 
                                     onclick="showCourseDetails('cloud-computing')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -776,17 +993,101 @@
                                 <li>AI Monetization</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">60,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="ai-essentials" 
                                     onclick="showCourseDetails('ai-essentials')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+
+<!-- Cyber Security -->
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+        <div class="position-relative">
+            <img src="img/cyber.png" class="img-fluid w-100" alt="Cyber Security" style="height: 200px; object-fit: cover;">
+            <div class="course-badge bg-danger">HOT</div>
+        </div>
+        <div class="p-4">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="program-duration"><i class="fas fa-clock me-1"></i> 16 Weeks</span>
+                <span class="text-primary"><i class="fas fa-shield-alt me-1"></i> Tech</span>
+            </div>
+            <h4 class="mb-3">Cyber Security</h4>
+            <p class="mb-3">Learn essential cybersecurity concepts, threat prevention, and security implementation techniques.</p>
+            
+            <div class="program-outcomes mb-3">
+                <li>Network security fundamentals</li>
+                <li>Threat detection & prevention</li>
+                <li>Encryption techniques</li>
+                <li>Security best practices</li>
+            </div>
+            
+            <!-- Scholarship Badge -->
+            <span class="scholarship-badge">Scholarship Available</span>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <button class="btn btn-sm btn-outline-primary" 
+                    data-course-id="cyber-security" 
+                    onclick="showCourseDetails('cyber-security')">
+                    Details
+                </button>
+                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Software Testing -->
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+    <div class="course-item bg-white rounded-3 overflow-hidden shadow-sm h-100">
+        <div class="position-relative">
+            <img src="img/SOFTWARE TESTING.png" class="img-fluid w-100" alt="Software Testing" style="height: 200px; object-fit: cover;">
+            <div class="course-badge bg-info">IN-DEMAND</div>
+        </div>
+        <div class="p-4">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="program-duration"><i class="fas fa-clock me-1"></i> 12 Weeks</span>
+                <span class="text-primary"><i class="fas fa-bug me-1"></i> Tech</span>
+            </div>
+            <h4 class="mb-3">Software Testing</h4>
+            <p class="mb-3">Master software testing methodologies, automation, and quality assurance processes.</p>
+            
+            <div class="program-outcomes mb-3">
+                <li>Manual testing techniques</li>
+                <li>Test automation with Selenium</li>
+                <li>Performance testing</li>
+                <li>Quality assurance processes</li>
+            </div>
+            
+            <!-- Scholarship Badge -->
+            <span class="scholarship-badge">Scholarship Available</span>
+            
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <button class="btn btn-sm btn-outline-primary" 
+                    data-course-id="software-testing" 
+                    onclick="showCourseDetails('software-testing')">
+                    Details
+                </button>
+                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -823,13 +1124,18 @@
                                 <li>Writing skills</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="english-mastery" 
                                     onclick="showCourseDetails('english-mastery')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -857,13 +1163,18 @@
                                 <li>Writing skills</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="french-fluency" 
                                     onclick="showCourseDetails('french-fluency')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -891,13 +1202,18 @@
                                 <li>Writing skills</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="kiswahili-beginners" 
                                     onclick="showCourseDetails('kiswahili-beginners')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -925,13 +1241,18 @@
                                 <li>Proficiency Certification</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="english-fluency" 
                                     onclick="showCourseDetails('english-fluency')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -959,13 +1280,18 @@
                                 <li>Situation simulations</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="french-tourism" 
                                     onclick="showCourseDetails('french-tourism')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -993,13 +1319,18 @@
                                 <li>Proficiency Certification</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="kiswahili-advanced" 
                                     onclick="showCourseDetails('kiswahili-advanced')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1033,23 +1364,25 @@
                             <h4 class="mb-3">Piano Mastery Program</h4>
                             <p class="mb-3">Comprehensive training from basic chords to advanced compositions.</p>
                             
-                            <div class="program-outcomes mb-5">
-                               
+                            <div class="program-outcomes mb-3">
                                 <li>Music theory fundamentals</li>
                                 <li>Sight-reading skills</li>
                                 <li>Chord progressions</li>
                                 <li>Performance techniques</li>
-                                
                             </div>
                             
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">200,000 Frw</h5>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="piano-mastery" 
                                     onclick="showCourseDetails('piano-mastery')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1077,13 +1410,18 @@
                                 <li>Song arrangement</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="guitar-training" 
                                     onclick="showCourseDetails('guitar-training')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1111,13 +1449,18 @@
                                 <li>Playing with music</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="drumming-fundamentals" 
                                     onclick="showCourseDetails('drumming-fundamentals')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1145,13 +1488,18 @@
                                 <li>Playing in a band</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="bass-guitar" 
                                     onclick="showCourseDetails('bass-guitar')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1170,7 +1518,7 @@
                                 <span class="text-primary"><i class="fas fa-headphones me-1"></i> Bass</span>
                             </div>
                             <h4 class="mb-3">Bass Guitar training</h4>
-                            <p class="mb-3">Laster the foundational instrument that drives the rhythm section.</p>
+                            <p class="mb-3">Master the foundational instrument that drives the rhythm section.</p>
                             
                             <div class="program-outcomes mb-3">
                                 <li>Bass lines creation</li>
@@ -1179,13 +1527,18 @@
                                 <li>Playing in a band</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">90,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="music-production" 
                                     onclick="showCourseDetails('music-production')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1213,13 +1566,18 @@
                                 <li>Vocal arrangement</li>
                             </div>
                             
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="text-primary mb-0">350,000 Frw</h5>
+                            <!-- Scholarship Badge -->
+                            <span class="scholarship-badge">Scholarship Available</span>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-3">
                                 <button class="btn btn-sm btn-outline-primary" 
                                     data-course-id="vocal-training" 
                                     onclick="showCourseDetails('vocal-training')">
                                     Details
                                 </button>
+                                <a href="https://form.jotform.com/250560825113045" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user-plus me-1"></i> Enroll
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1228,99 +1586,43 @@
         </div>
     </section>
 
-    <!-- Learning Benefits Section 
-    <section class="container-xxl py-5 bg-primary text-white">
+    <!-- Scholarship Information Section -->
+    <section class="container-xl py-5 bg-light">
         <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title bg-white text-center text-primary px-3">Why Choose Us</h6>
-                    <h1 class="mb-4">The MasteryHub Advantage</h1>
-                    <p class="mb-4">We provide more than just courses - we offer a complete learning ecosystem designed for your success.</p>
-                    
-                    <div class="row g-4">
-                        <div class="col-6">
-                            <div class="d-flex align-items-start">
-                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-chalkboard-teacher fa-lg mt-2"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-1">Expert Instructors</h5>
-                                    <p class="mb-0">Industry professionals with real-world experience</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-start">
-                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-briefcase fa-lg mt-2"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-1">Career Support</h5>
-                                    <p class="mb-0">Resume building and job placement assistance</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-start">
-                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-project-diagram fa-lg mt-2"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-1">Project-Based</h5>
-                                    <p class="mb-0">Build portfolio-worthy projects</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-start">
-                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-certificate fa-lg mt-2"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-1">Certification</h5>
-                                    <p class="mb-0">Earn recognized certificates</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-start">
-                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-users fa-lg mt-2"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-1">Small Class Sizes</h5>
-                                    <p class="mb-0">Personalized attention</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-start">
-                                <div class="icon-box bg-white text-primary rounded-circle flex-shrink-0 me-3" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-laptop-code fa-lg mt-2"></i>
-                                </div>
-                                <div>
-                                    <h5 class="mb-1">Modern Facilities</h5>
-                                    <p class="mb-0">State-of-the-art equipment</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Financial Support</h6>
+                <h1 class="mb-5">Scholarship Opportunities</h1>
+                <p class="lead text-muted mb-5">We believe in making quality education accessible to everyone</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="scholarship-info-card">
+                        <h4><i class="fas fa-award me-2"></i>Merit-Based Scholarships</h4>
+                        <p>Academic excellence scholarships for top-performing students in all programs.</p>
                     </div>
                 </div>
-                
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="position-relative rounded overflow-hidden">
-                        <img class="img-fluid w-100" src="img/learning-environment.jpg" alt="Learning at MasteryHub">
-                        <div class="position-absolute top-0 start-0 bg-primary opacity-75 w-100 h-100"></div>
-                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                            <a href="https://www.youtube.com/watch?v=yourvideo" class="btn btn-light btn-lg rounded-circle" style="width: 70px; height: 70px;">
-                                <i class="fas fa-play text-primary"></i>
-                            </a>
-                        </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="scholarship-info-card">
+                        <h4><i class="fas fa-hand-holding-heart me-2"></i>Financial Aid</h4>
+                        <p>Need-based scholarships for students requiring financial assistance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="scholarship-info-card">
+                        <h4><i class="fas fa-users me-2"></i>Group Discounts</h4>
+                        <p>Special rates for groups, organizations, and corporate training programs.</p>
                     </div>
                 </div>
             </div>
+            
+            <div class="text-center mt-5">
+                <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+                    <i class="fas fa-envelope me-2"></i>Contact for Scholarship Details
+                </a>
+            </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Testimonials Section -->
     <section class="container-xl py-5">
@@ -1393,140 +1695,65 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Testimonial 4 -->
-                <div class="testimonial-item">
-                    <div class="testimonial-text position-relative bg-light text-dark p-4 mb-4">
-                        <p class="mb-3">The ICT literacy course was exactly what I needed to transition from manual work to an office job. The practical skills made all the difference.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5 wow fadeIn">
+                <h6 class="section-title bg-white text-center text-primary px-3">Our Partners</h6>
+                <h2>Trusted By Industry Leaders</h2>
+            </div>
+
+            <div class="partner-logos">
+                <div class="partner-track">
+                    <!-- Duplicate this set for seamless looping -->
+                    <div class="partner-item">
+                        <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
                     </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle me-3" src="img/Marie.C" alt="Marie C.">
-                        <div>
-                            <h5 class="mb-1">Marie C.</h5>
-                            <p class="m-0">ICT Graduate</p>
-                            <div class="rating">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                            </div>
-                        </div>
+                    <div class="partner-item">
+                        <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
                     </div>
-                </div>
-                
-                <!-- Testimonial 5 -->
-                <div class="testimonial-item">
-                    <div class="testimonial-text position-relative bg-light text-dark p-4 mb-4">
-                        <p class="mb-3">The French language program gave me the confidence to apply for jobs in Francophone countries. I now work for an international NGO.</p>
+                    <div class="partner-item">
+                        <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
                     </div>
-                    <div class="d-flex align-items-center">
-                        <img class="rounded-circle me-3" src="img/Eric.M" alt="Eric M.">
-                        <div>
-                            <h5 class="mb-1">Eric M.</h5>
-                            <p class="m-0">French Program Graduate</p>
-                            <div class="rating">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star-half-alt text-warning"></i>
-                            </div>
-                        </div>
+                    <div class="partner-item">
+                        <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
+                    </div>
+
+                    <!-- Duplicate this set for seamless looping -->
+                    <div class="partner-item">
+                        <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
+                    </div>
+                    <div class="partner-item">
+                        <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
+                    </div>
+                    <div class="partner-item">
+                        <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
+                    </div>
+                    <div class="partner-item">
+                        <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
+                    </div>
+
+                    <!-- Duplicate this set for seamless looping -->
+                    <div class="partner-item">
+                        <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
+                    </div>
+                    <div class="partner-item">
+                        <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
+                    </div>
+                    <div class="partner-item">
+                        <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
+                    </div>
+                    <div class="partner-item">
+                        <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CTA Section 
-    <section class="container-xxl py-5 bg-primary text-white">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="mb-4">Ready to Transform Your Skills?</h1>
-                    <p class="mb-4">Join hundreds of students who have launched successful careers through our programs. Take the first step today.</p>
-                    <a href="https://form.jotform.com/250560825113045" class="btn btn-light btn-lg rounded-pill px-4 py-2 me-2">Enroll Now</a>
-                    <a href="contact.html" class="btn btn-outline-light btn-lg rounded-pill px-4 py-2">Contact Us</a>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white rounded p-4">
-                        <h4 class="text-primary mb-4">Have Questions?</h4>
-                        <form id="course-inquiry-form">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <input type="text" class="form-control border-0 py-3" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" class="form-control border-0 py-3" placeholder="Your Email" required>
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select border-0 py-3" required>
-                                        <option value="" selected disabled>Select Course</option>
-                                        <option>Web Development</option>
-                                        <option>ICT Literacy</option>
-                                        <option>English Language</option>
-                                        <option>French Language</option>
-                                        <option>Piano Classes</option>
-                                        <option>Guitar Training</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0 py-3" rows="3" placeholder="Your Message" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit Question</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-<!-- Partners Section -->
-<section class="partners-section py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5 wow fadeIn">
-            <h6 class="section-title bg-white text-center text-primary px-3">Our Partners</h6>
-            <h2>Trusted By Industry Leaders</h2>
-        </div>
-
-        <div class="partner-logos">
-            <div class="partner-track">
-                <!-- Duplicate this set for seamless looping -->
-                <div class="partner-item">
-                    <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
-                </div>
-                <div class="partner-item">
-                    <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
-                </div>
-                <div class="partner-item">
-                    <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
-                </div>
-                <div class="partner-item">
-                    <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
-                </div>
-                <div class="partner-item">
-                    <img src="img/BK LTD.png" alt="Partner 1" class="partner-logo">
-                </div>
-                <div class="partner-item">
-                    <img src="img/ALX.jpeg" alt="Partner 1" class="partner-logo">
-                </div>
-                <div class="partner-item">
-                    <img src="img/1MRC.jpg" alt="Partner 2" class="partner-logo">
-                </div>
-                <div class="partner-item">
-                    <img src="img/MINICT.png" alt="Partner 2" class="partner-logo">
-                </div>
-                <!-- Add 6-10 partner logos -->
-            </div>
-        
-            </div>
-        </div>
-    </div>
-</section>
 
     <!-- Footer -->
     <footer class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn liquid-bg floating card-3d gradient-border" data-wow-delay="0.1s">
@@ -1538,6 +1765,9 @@
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="#">Terms & Condition</a>
+                     <div class="trust-container">
+                        <a class="" target="_blank" href="https://certification.dbi.rw/public?name=MASTERY"><img src="./img/seal.png" alt="MasteryHub DBI trust Seal" class="trust-seal "></a>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -1601,98 +1831,87 @@
         <i class="fas fa-user-plus me-2"></i> Enroll Now
     </a> 
 
-    
-    <!-- Custom JavaScript -->
-    <script>
-        // Initialize counter animation
-        $('[data-toggle="counter-up"]').counterUp({
-            delay: 10,
-            time: 1000
-        });
-        
-        // Initialize testimonial carousel
-        $('.testimonial-carousel').owlCarousel({
-            autoplay: true,
-            smartSpeed: 1000,
-            margin: 30,
-            dots: true,
-            loop: true,
-            center: true,
-            responsive: {
-                0:{ items:1 },
-                576:{ items:1 },
-                768:{ items:2 },
-                992:{ items:3 }
-            }
-        });
-
-        
-
-        // Form submission
-        $('#course-inquiry-form').submit(function(e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry! We will contact you shortly.');
-            this.reset();
-        });
-    </script>
-
     <!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
 
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 
-<!-- Add the force-fix script here -->
-<script>
-// Force mobile navigation fixes
-document.addEventListener('DOMContentLoaded', function() {
-    // Fix for navbar toggler
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    if (navbarToggler && navbarCollapse) {
-        navbarToggler.addEventListener('click', function() {
-            navbarCollapse.classList.toggle('show');
+    <!-- Add the force-fix script here -->
+    <script>
+    // Force mobile navigation fixes
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fix for navbar toggler
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        if (navbarToggler && navbarCollapse) {
+            navbarToggler.addEventListener('click', function() {
+                navbarCollapse.classList.toggle('show');
+            });
+        }
+        
+        // Force dropdown toggle on mobile
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 991.98) {
+                    e.preventDefault();
+                    const dropdownMenu = this.nextElementSibling;
+                    dropdownMenu.classList.toggle('show');
+                    
+                    // Close other open dropdowns
+                    document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+                        if (menu !== dropdownMenu) {
+                            menu.classList.remove('show');
+                        }
+                    });
+                }
+            });
         });
-    }
-    
-    // Force dropdown toggle on mobile
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    dropdownToggles.forEach(function(toggle) {
-        toggle.addEventListener('click', function(e) {
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(e) {
             if (window.innerWidth <= 991.98) {
-                e.preventDefault();
-                const dropdownMenu = this.nextElementSibling;
-                dropdownMenu.classList.toggle('show');
-                
-                // Close other open dropdowns
-                document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
-                    if (menu !== dropdownMenu) {
+                if (!e.target.matches('.dropdown-toggle') && !e.target.closest('.dropdown-menu')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
                         menu.classList.remove('show');
-                    }
-                });
+                    });
+                }
             }
         });
     });
+
+    // Initialize counter animation
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 1000
+    });
     
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 991.98) {
-            if (!e.target.matches('.dropdown-toggle') && !e.target.closest('.dropdown-menu')) {
-                document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
-                    menu.classList.remove('show');
-                });
-            }
+    // Initialize testimonial carousel
+    $('.testimonial-carousel').owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 30,
+        dots: true,
+        loop: true,
+        center: true,
+        responsive: {
+            0:{ items:1 },
+            576:{ items:1 },
+            768:{ items:2 },
+            992:{ items:3 }
         }
     });
-});
-</script>
+    </script>
+    
+
     <!-- Course Details Modal -->
     <div class="modal fade" id="courseDetailsModal" tabindex="-1" aria-labelledby="courseDetailsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -1711,8 +1930,5 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    
-
-    
 </body>
 </html>

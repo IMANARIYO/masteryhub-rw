@@ -48,6 +48,27 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        @media (max-width: 768px) {
+            .hideme {
+                display: none;
+            }
+        }
+        /* Optional: Enhanced scholarship badge styling */
+.badge.bg-success {
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+}
+
+.badge.bg-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+    </style>
+
 </head>
 
 <body>
@@ -65,6 +86,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
+                 <a href="https://codeforimpact.rw" target="_blank" rel="noopener noreferrer" class="py-md-3 px-md-5 me-3 animated slideInLeft" aria-label="Know More (opens in new tab)">
+                                    Code For Impact<i class="fas fa-external-link-alt ms-2" aria-hidden="true"></i>
+                                </a>
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="courses.html" class="nav-item nav-link">Courses</a>
@@ -78,6 +102,7 @@
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
+               
             </div>
             <a href="https://form.jotform.com/250560825113045" target="_blank" class="join-button btn py-4 px-lg-5  d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
@@ -87,40 +112,22 @@
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
+
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/how_blockchain_works.jpg" style="height: 854px;" alt="masteryhub-Animation">
+                <img class="img-fluid" src="img/cfi 4.jpg" alt="masteryhub-technology">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mt-0 animated slideInDown">Join Us In Our Up Comming </h5>
-                                <h1 class="display-3 text-white animated slideInDown">TechTalk Virtual Event</h1>
-                                <h3 class="text-primary">About Blockchain</h3>
-                                <p class="fs-5 text-white mb-4 pb-2">A huge thank you to everyone who joined our virtual tech talk on blockchain!
-                                    <p class="fs-5 text-white mb-4 pb-2">We’d love to hear your thoughts! Share your feedback on the event and let us know what topics you'd like to see in the future.</p>                             
-                                    </p>
-                                <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know More</a>
-                                <a href="https://form.jotform.com/250560825113045"
-                                data-luma-action="checkout"
-                                target="_blank" class="btn btn-light  py-md-3 px-md-5 animated slideInRight">Leave Us A feedback</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/MHR1-min.jpg" alt="masteryhub-Animation">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Empowering a tech-skilled generation</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Mastery Hub Of Rwanda</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">A transformative Hub designed to empower people with 
-                                    essential skills for success in 21st century. By offering a blend of an affordable, high-quality technical training in Software Development, Cultural Art 
-                                     , Languages and IT Solutions as well. The hub promotes creativity, self-reliance, and community development.</p>
-                                <a href="about.html#moreAbout" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown"> Build What Matters!</h5>
+                                <h1 class="display-6 text-white animated slideInDown">Code For Impact Competition </h1>
+                                <p class="fs-5 text-white mb-4 pb-2">The Code for Impact Competition is a national digital innovation and entrepreneurship competition organized by Mastery Hub of Rwanda in collaboration with ALX Africa, and officially endorsed by the Ministry of ICT and Innovation.<span class="hideme"> <br>
+                                    This competition seeks to mobilize Rwanda's brightest young minds to propose, design, and build tech-powered solutions to pressing societal challenges, moving beyond traditional hackathons to create an actual pipeline of sustainable, youth-led startups.<br>
+                                    The competition contributes to Rwanda's Vision 2030 by supporting a knowledge-driven, digital economy fueled by youth innovation, with the goal of incubating 50+ youth-led companies by 2029.</span></p>
+                                <a href="https://codeforimpact.rw" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" aria-label="Know More (opens in new tab)">
+                                    Know More <i class="fas fa-external-link-alt ms-2" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://codeforimpact.rw/competition2" target="_blank" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                             </div>
                         </div>
                     </div>
@@ -128,22 +135,75 @@
             </div>
 
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/mhr about2.jpg" alt="masteryhub-technology">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Empowerment, Literacy Support and Inclusivity</h5>
-                                <h1 class="display-6 text-white animated slideInDown"> Building a Tech-Skilled Generation </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">To servive this Fast-ever speeding 
-                                    technology Development of 21<sup>st</sup> Century, You need to be prepared with Tech skills that matter most in solving the day-to-day Tasks. not needing to relay On anyone else for every-techy task. and so here we are for that Exact Reason!</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Know More</a>
-                                <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
-                            </div>
-                        </div>
-                    </div>
+    <img class="img-fluid" src="img/cfi 3.jpg" style="height: 854px;" alt="Coding & Robotics Club">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-sm-10 col-lg-8">
+                    <h5 class="text-primary text-uppercase mt-0 animated slideInDown">Enroll your school in</h5>
+                    <h1 class="display-3 text-white animated slideInDown">CODING & ROBOTICS CLUBS</h1>
+                    <h3 class="text-primary">Our flagship program</h3>
+                    <p class="fs-5 text-white mb-4 pb-2">In partnership with the Ministry of ICT and Innovation Rwanda, we bring innovative Coding & Robotics Clubs to schools across the country. This flagship program introduces students to essential 21st-century skills through hands-on learning in programming, robotics, and computational thinking.</p>
+                    <p class="fs-5 text-white mb-4 pb-2">We are actively seeking partnerships with schools to implement this transformative program. Whether you're a public or private institution, join us in preparing the next generation of innovators and problem-solvers.</p>
+                    <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Partner With Us</a>
+                    <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Request Program Details</a>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="owl-carousel-item position-relative">
+    <img class="img-fluid" src="img/cfi 1.jpg" alt="Teachers Digital Literacy">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-sm-10 col-lg-8">
+                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Enroll your teachers in</h5>
+                    <h1 class="display-3 text-white animated slideInDown">TEACHERS' DIGITAL LITERACY PROGRAM</h1>
+                    <p class="fs-5 text-white mb-4 pb-2">In collaboration with the Rwanda Basic Education Board (REB), we offer comprehensive digital literacy training designed specifically for educators. This program equips teachers with essential technology skills to enhance classroom instruction and prepare students for the digital age.</p>
+                    <a href="about.html#moreAbout" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Program Curriculum</a>
+                    <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Enroll Teachers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="owl-carousel-item position-relative">
+    <img class="img-fluid" src="img/mhr about2.jpg" alt="Young Masters Program">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-sm-10 col-lg-8">
+                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Enroll your child in</h5>
+                    <h1 class="display-3 text-white animated slideInDown">YOUNG MASTERS AFTER SCHOOL PROGRAM</h1>
+                    <p class="fs-5 text-white mb-4 pb-2">Our specially designed after-school program helps young students develop essential skills for the 21st century. Through engaging, hands-on activities, students aged 8-16 explore coding fundamentals, music appreciation, language learning, and creative arts.</p>
+                    <a href="#program-details" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Program Details</a>
+                    <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="owl-carousel-item position-relative">
+    <img class="img-fluid" src="img/MHR1-min.jpg" alt="Software Development Internship" style="height: 854px; object-fit: cover;">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-sm-10 col-lg-8">
+                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Academic Partnership Program</h5>
+                    <h1 class="display-3 text-white animated slideInDown">SOFTWARE DEVELOPMENT ACADEMIC INTERNSHIP</h1>
+                    <p class="fs-5 text-white mb-4 pb-2">We partner with universities and secondary schools across Rwanda to provide structured software development internships that bridge the gap between academic learning and real-world industry experience. Our program is designed to complement classroom education with practical, hands-on training.</p>
+                    <a href="internership.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">View Internship Details</a>
+                    <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Partner Your Institution</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+             
             
         </div>
     </div>
@@ -532,141 +592,149 @@
         
         <div class="row g-4 justify-content-center">
             <!-- Course 1 - Web Design -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-white shadow-sm rounded-3 overflow-hidden h-100">
-                    <div class="position-relative overflow-hidden" style="background: #eee; height: 200px;">
-                        <img class="img-fluid w-100" src="img/full stack.jpg" alt="Web Development at MasteryHub Rwanda" style="height: 200px; object-fit: cover;">
-                        <div class="course-badge bg-primary text-white position-absolute top-0 end-0 m-3 py-1 px-3 rounded-pill">
-                            Popular
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-light text-primary py-2 px-3"><i class="fa fa-clock me-1"></i> 12 Months</span>
-                            <span class="badge bg-light text-success py-2 px-3"><i class="fa fa-user-graduate me-1"></i> Beginner</span>
-                        </div>
-                        <h4 class="mb-3">Full-Stack Development</h4>
-                        <p class="text-muted mb-4 course-description">Master modern web technologies including HTML5, CSS3, JavaScript and popular frameworks.</p>
-                        
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div>
-                                <div class="rating">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="far fa-star text-warning"></i>
-                                    <small class="text-muted ms-1">(24)</small>
-                                </div>
-                            </div>
-                            <h5 class="text-primary mb-0 course-price">250k Frw</h5>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between mt-4">
-                            <a class="btn btn-outline-primary btn-sm flex-grow-1 me-2"
-                                    data-course-id="full-stack-dev" 
-                                    onclick="showCourseDetails('full-stack-dev')">
-                                <i class="fa fa-info-circle me-1"></i> Details
-                            </a>
-                            <a href="https://form.jotform.com/250560825113045" target="_blank"  class="btn btn-primary text-nowrap btn-sm flex-grow-1">
-                                <i class="fa fa-user-plus me-1"></i> Enroll Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Course 2 - ICT Literacy -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="course-item bg-white shadow-sm rounded-3 overflow-hidden h-100">
-                    <div class="position-relative overflow-hidden"style="background: #eee; height: 200px;">
-                        <img class="img-fluid w-100" src="img/computer lit.jpg" alt="ICT Literacy at MasteryHub" style="height: 200px; object-fit: cover;">
-                        <div class="course-badge bg-success text-white position-absolute top-0 end-0 m-3 py-1 px-3 rounded-pill">
-                            New
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-light text-primary py-2 px-3"><i class="fa fa-clock me-1"></i> 3 Months</span>
-                            <span class="badge bg-light text-success py-2 px-3"><i class="fa fa-laptop me-1"></i> All Levels</span>
-                        </div>
-                        <h4 class="mb-3">ICT Literacy & Tech Skills</h4>
-                        <p class="text-muted mb-4 course-description">Essential digital skills for the modern workplace including office software, internet safety, and basic troubleshooting.</p>
-                        
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div>
-                                <div class="rating">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <small class="text-muted ms-1">(18)</small>
-                                </div>
-                            </div>
-                            <h5 class="text-primary mb-0 course-price">120K Frw</h5>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between mt-4">
-                            <a class="btn btn-outline-primary btn-sm flex-grow-1 me-2"
-                                    data-course-id="ict-literacy" 
-                                    onclick="showCourseDetails('ict-literacy')">
-                                <i class="fa fa-info-circle me-1"></i> Details
-                            </a>
-                            <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn text-nowrap btn-primary btn-sm flex-grow-1">
-                                <i class="fa fa-user-plus me-1"></i> Enroll Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Course 3 - English -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="course-item bg-white shadow-sm rounded-3 overflow-hidden h-100">
-                    <div class="position-relative overflow-hidden"style="background: #eee; height: 200px;">
-                        <img class="img-fluid w-100" src="img/english beg.jpg" alt="English at MasteryHub" style="height: 200px; object-fit: cover;">
-                        <div class="course-badge bg-info text-white position-absolute top-0 end-0 m-3 py-1 px-3 rounded-pill">
-                            Special Offer
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-light text-primary py-2 px-3"><i class="fa fa-clock me-1"></i> 3 Months</span>
-                            <span class="badge bg-light text-success py-2 px-3"><i class="fa fa-book me-1"></i> Intermediate</span>
-                        </div>
-                        <h4 class="mb-3">English Language</h4>
-                        <p class="text-muted mb-4 course-description">Improve your English communication skills for professional and academic success with our immersive program.</p>
-                        
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div>
-                                <div class="rating">
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="fas fa-star text-warning"></i>
-                                    <i class="far fa-star text-warning"></i>
-                                    <i class="far fa-star text-warning"></i>
-                                    <small class="text-muted ms-1">(12)</small>
-                                </div>
-                            </div>
-                            <h5 class="text-primary mb-0 course-price">90K Frw</h5>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between mt-4">
-                            <a class="btn btn-outline-primary btn-sm flex-grow-1 me-2"
-                                    data-course-id="english-fluency" 
-                                    onclick="showCourseDetails('english-fluency')">
-                                
-                                <i class="fa fa-info-circle me-1"></i> Details
-                            </a>
-                            <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-primary btn-sm flex-grow-1">
-                                <i class="fa fa-user-plus me-1"></i> Enroll Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Course 1 - Full-Stack Development -->
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="course-item bg-white shadow-sm rounded-3 overflow-hidden h-100">
+        <div class="position-relative overflow-hidden" style="background: #eee; height: 200px;">
+            <img class="img-fluid w-100" src="img/full stack.jpg" alt="Web Development at MasteryHub Rwanda" style="height: 200px; object-fit: cover;">
+            <div class="course-badge bg-primary text-white position-absolute top-0 end-0 m-3 py-1 px-3 rounded-pill">
+                Popular
             </div>
         </div>
+        <div class="p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-light text-primary py-2 px-3"><i class="fa fa-clock me-1"></i> 12 Months</span>
+                <span class="badge bg-light text-success py-2 px-3"><i class="fa fa-user-graduate me-1"></i> Beginner</span>
+            </div>
+            <h4 class="mb-3">Full-Stack Development</h4>
+            <p class="text-muted mb-4 course-description">Master modern web technologies including HTML5, CSS3, JavaScript and popular frameworks.</p>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <div class="rating">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <small class="text-muted ms-1">(24)</small>
+                    </div>
+                </div>
+                <!-- Scholarship Badge instead of price -->
+                <span class="badge bg-success py-2 px-3">
+                    <i class="fas fa-graduation-cap me-1"></i> Scholarship Available
+                </span>
+            </div>
+            
+            <div class="d-flex justify-content-between mt-4">
+                <a class="btn btn-outline-primary btn-sm flex-grow-1 me-2"
+                        data-course-id="full-stack-dev" 
+                        onclick="showCourseDetails('full-stack-dev')">
+                    <i class="fa fa-info-circle me-1"></i> Details
+                </a>
+                <a href="https://form.jotform.com/250560825113045" target="_blank"  class="btn btn-primary text-nowrap btn-sm flex-grow-1">
+                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Course 2 - ICT Literacy -->
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+    <div class="course-item bg-white shadow-sm rounded-3 overflow-hidden h-100">
+        <div class="position-relative overflow-hidden" style="background: #eee; height: 200px;">
+            <img class="img-fluid w-100" src="img/Isangemo.png" alt="ICT Literacy at MasteryHub" style="height: 200px; object-fit: cover;">
+            <div class="course-badge bg-success text-white position-absolute top-0 end-0 m-3 py-1 px-3 rounded-pill">
+                New
+            </div>
+        </div>
+        <div class="p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-light text-primary py-2 px-3"><i class="fa fa-clock me-1"></i> 3 Months</span>
+                <span class="badge bg-light text-success py-2 px-3"><i class="fa fa-laptop me-1"></i> All Levels</span>
+            </div>
+            <h4 class="mb-3">IsangeMO Program</h4>
+            <p class="text-muted mb-4 course-description">Essential digital skills for the modern workplace including office software, internet safety, and basic troubleshooting.</p>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <div class="rating">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <small class="text-muted ms-1">(18)</small>
+                    </div>
+                </div>
+                <!-- Scholarship Badge instead of price -->
+                <span class="badge bg-success py-2 px-3">
+                    <i class="fas fa-graduation-cap me-1"></i> Scholarship Available
+                </span>
+            </div>
+            
+            <div class="d-flex justify-content-between mt-4">
+                <a class="btn btn-outline-primary btn-sm flex-grow-1 me-2"
+                        data-course-id="ict-literacy" 
+                        onclick="showCourseDetails('ict-literacy')">
+                    <i class="fa fa-info-circle me-1"></i> Details
+                </a>
+                <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn text-nowrap btn-primary btn-sm flex-grow-1">
+                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Course 3 - English -->
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+    <div class="course-item bg-white shadow-sm rounded-3 overflow-hidden h-100">
+        <div class="position-relative overflow-hidden" style="background: #eee; height: 200px;">
+            <img class="img-fluid w-100" src="img/english beg.jpg" alt="English at MasteryHub" style="height: 200px; object-fit: cover;">
+            <div class="course-badge bg-info text-white position-absolute top-0 end-0 m-3 py-1 px-3 rounded-pill">
+                Special Offer
+            </div>
+        </div>
+        <div class="p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-light text-primary py-2 px-3"><i class="fa fa-clock me-1"></i> 3 Months</span>
+                <span class="badge bg-light text-success py-2 px-3"><i class="fa fa-book me-1"></i> Intermediate</span>
+            </div>
+            <h4 class="mb-3">English Language</h4>
+            <p class="text-muted mb-4 course-description">Improve your English communication skills for professional and academic success with our immersive program.</p>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <div class="rating">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <small class="text-muted ms-1">(12)</small>
+                    </div>
+                </div>
+                <!-- Scholarship Badge instead of price -->
+                <span class="badge bg-success py-2 px-3">
+                    <i class="fas fa-graduation-cap me-1"></i> Scholarship Available
+                </span>
+            </div>
+            
+            <div class="d-flex justify-content-between mt-4">
+                <a class="btn btn-outline-primary btn-sm flex-grow-1 me-2"
+                        data-course-id="english-fluency" 
+                        onclick="showCourseDetails('english-fluency')">
+                    <i class="fa fa-info-circle me-1"></i> Details
+                </a>
+                <a href="https://form.jotform.com/250560825113045" target="_blank" class="btn btn-primary btn-sm flex-grow-1">
+                    <i class="fa fa-user-plus me-1"></i> Enroll Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
         
         <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.7s">
             <a href="courses.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow">
@@ -908,6 +976,10 @@
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="#">Terms & Condition</a>
+                    <div class="trust-container">
+                        <a class="" target="_blank" href="https://certification.dbi.rw/public?name=MASTERY"><img src="./img/seal.png" alt="MasteryHub DBI trust Seal" class="trust-seal "></a>
+                    </div>
+                    
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>

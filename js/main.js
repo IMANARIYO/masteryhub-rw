@@ -194,7 +194,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Full Stack Development",
                 description: "Comprehensive training in both front-end and back-end technologies to build complete web applications.",
                 duration: "48  Weeks",
-                price: "250,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "HTML5, CSS3, JavaScript fundamentals",
                     "React.js frontend framework",
@@ -221,7 +221,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Front-End Web Development",
                 description: "Learn HTML5, CSS3, JavaScript and React to build modern, responsive websites.",
                 duration: "24 Weeks",
-                price: "150,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Responsive web design principles",
                     "JavaScript programming fundamentals",
@@ -247,7 +247,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Back-End Development",
                 description: "Master Node.js, Express, and MongoDB to build powerful server-side applications.",
                 duration: "24 Weeks",
-                price: "150,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Node.js runtime environment",
                     "Express framework",
@@ -274,7 +274,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Computer Literacy & Digital Skills",
                 description: "Essential computer skills for the modern workplace and academic success.",
                 duration: "12 Weeks",
-                price: "120,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Computer fundamentals",
                     "Microsoft Office proficiency",
@@ -299,7 +299,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Graphic Design",
                 description: "Learn industry-standard tools and principles for creating professional visual designs.",
                 duration: "12 Weeks",
-                price: "140,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Adobe Photoshop skills",
                     "Adobe Illustrator proficiency",
@@ -325,7 +325,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Cloud Computing Basics",
                 description: "Introduction to cloud services, deployment models, and cloud security fundamentals.",
                 duration: "6 Weeks",
-                price: "80,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Cloud service models (IaaS, PaaS, SaaS)",
                     "AWS fundamentals",
@@ -352,7 +352,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "AI Essentials",
                 description: "Introduction to artificial intelligence concepts and practical applications.",
                 duration: "4 Weeks",
-                price: "60,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "AI fundamentals",
                     "Machine learning basics",
@@ -377,7 +377,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "English Language Mastery",
                 description: "Comprehensive training in reading, writing, speaking and listening skills.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Grammar fundamentals",
                     "Vocabulary building",
@@ -402,7 +402,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "English proficiency",
                 description: "Develop professional communication skills for meetings, presentations, and workplace interactions.",
                 duration: "8 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Professional vocabulary",
                     "Business writing skills",
@@ -429,7 +429,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Business English Communication",
                 description: "Specialized English training for professional communication.",
                 duration: "8 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Business terminology",
                     "Report writing",
@@ -454,7 +454,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "French language",
                 description: "Develop practical communication skills for business and travel.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Basic to advanced French",
                     "Business communication",
@@ -479,7 +479,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "French Proficiency",
                 description: "Language skills especifically for professionals.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Hospitality vocabulary",
                     "Customer service phrases",
@@ -505,7 +505,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Kiswahili language",
                 description: "Essential communication skills for business and daily interactions.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Basic vocabulary",
                     "Grammar essentials",
@@ -530,7 +530,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Advanced Proficiency",
                 description: "For those looking to achieve fluency in Kiswahili for professional use.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Advanced grammar",
                     "Business communication",
@@ -557,7 +557,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Piano Mastery Program",
                 description: "From basic chords to advanced compositions with our structured piano training program.",
                 duration: "24 Weeks",
-                price: "200,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Music theory fundamentals",
                     "Sight-reading skills",
@@ -582,7 +582,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Acoustic Guitar Training",
                 description: "From strumming basics to advanced fingerstyle techniques.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Basic chords and strumming",
                     "Fingerstyle techniques",
@@ -607,7 +607,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Drumming Fundamentals",
                 description: "Develop rhythm, coordination and musicality through drumming.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Basic drum patterns",
                     "Rhythm development",
@@ -632,7 +632,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Solo Guitar",
                 description: "Master the foundational instrument that drives the rhythm section.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Solo lines creation",
                     "Fingerstyle techniques",
@@ -656,7 +656,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Bass Guitar class",
                 description: "Master the foundational instrument that drives the rhythm section.",
                 duration: "12 Weeks",
-                price: "90,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "Bass lines creation",
                     "Fingerstyle techniques",
@@ -681,7 +681,7 @@ window.addEventListener('resize', adjustScrollSpeed);
                 title: "Music production",
                 description: "Learn to create professional music using digital audio workstations.",
                 duration: "16 Weeks",
-                price: "350,000 Frw",
+                price: "Scholarship Available",
                 outcomes: [
                     "MIDI Control",
                     "Beat making",
@@ -699,7 +699,102 @@ window.addEventListener('resize', adjustScrollSpeed);
                     "Instruments skills"
                 ],
                 image: "music pro.jpg"
-            }
+            },
+            // Add these to your existing courseDetails object
+"software-eng-fundamentals": {
+    title: "Software Engineering Fundamentals",
+    description: "FREE introductory course covering core software engineering principles, development methodologies, and industry best practices. Perfect for beginners starting their software development journey.",
+    duration: "8 Weeks",
+    price: "FREE - No cost",
+    outcomes: [
+        "Understanding of Software Development Life Cycle (SDLC)",
+        "Agile and Scrum methodologies",
+        "Version control with Git and GitHub",
+        "Clean code principles and best practices",
+        "Basic software design patterns",
+        "Documentation and collaboration tools",
+        "Introduction to DevOps concepts"
+    ],
+    syllabus: [
+        "Week 1: Introduction to Software Engineering",
+        "Week 2: SDLC Methodologies (Waterfall, Agile, DevOps)",
+        "Week 3: Version Control with Git & GitHub",
+        "Week 4: Clean Code Principles",
+        "Week 5: Software Design Patterns Basics",
+        "Week 6: Testing Fundamentals",
+        "Week 7: Documentation & Collaboration",
+        "Week 8: Capstone Project"
+    ],
+    requirements: [
+        "Basic computer literacy",
+        "No prior programming experience required",
+        "Internet access",
+        "Commitment to complete the course"
+    ],
+    image: "software-eng-fundamentals.jpg"
+},
+"cyber-security": {
+    title: "Cyber Security",
+    description: "Comprehensive cybersecurity training covering threat prevention, network security, encryption, and security implementation techniques to protect digital assets.",
+    duration: "16 Weeks",
+    price: "Scholarship Available",
+    outcomes: [
+        "Network security fundamentals",
+        "Threat detection and prevention techniques",
+        "Encryption and cryptography",
+        "Firewall configuration and management",
+        "Vulnerability assessment",
+        "Incident response planning",
+        "Security policies and compliance",
+        "Ethical hacking basics"
+    ],
+    syllabus: [
+        "Week 1-3: Cybersecurity Fundamentals",
+        "Week 4-6: Network Security & Protocols",
+        "Week 7-9: Cryptography & Encryption",
+        "Week 10-12: Threat Detection & Prevention",
+        "Week 13-14: Security Tools & Technologies",
+        "Week 15-16: Capstone Security Project"
+    ],
+    requirements: [
+        "Basic understanding of computer networks",
+        "Familiarity with operating systems",
+        "Analytical thinking skills",
+        "Laptop with minimum 4GB RAM"
+    ],
+    image: "cyber-security.jpg"
+},
+"software-testing": {
+    title: "Software Testing",
+    description: "Master software testing methodologies, automation tools, and quality assurance processes to ensure software reliability and performance.",
+    duration: "12 Weeks",
+    price: "Scholarship Available",
+    outcomes: [
+        "Manual testing techniques and strategies",
+        "Test automation with Selenium WebDriver",
+        "Performance and load testing",
+        "API testing with Postman",
+        "Mobile application testing",
+        "Test management tools (JIRA, TestRail)",
+        "Quality assurance best practices",
+        "Bug tracking and reporting"
+    ],
+    syllabus: [
+        "Week 1-3: Software Testing Fundamentals",
+        "Week 4-6: Manual Testing Techniques",
+        "Week 7-9: Automation Testing with Selenium",
+        "Week 10: API & Performance Testing",
+        "Week 11: Mobile & Cross-browser Testing",
+        "Week 12: Final Testing Project"
+    ],
+    requirements: [
+        "Basic understanding of software development",
+        "Logical thinking and attention to detail",
+        "Knowledge of any programming language (helpful but not required)",
+        "Laptop with minimum 4GB RAM"
+    ],
+    image: "software-testing.jpg"
+}
         };
 
         // Function to show course details in modal
