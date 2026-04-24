@@ -4,7 +4,19 @@ import { products } from '../../../db/schema';
 import type { NewProduct, Product } from '../_types';
 
 export async function queryAllProducts(): Promise<Product[]> {
-  return db.select().from(products);
+  return db
+    .select({
+      id: products.id,
+      title: products.title,
+      description: products.description,
+      price: products.price,
+      thumbnail: products.thumbnail,
+      rating: products.rating,
+      stock: products.stock,
+      brand: products.brand,
+      category: products.category,
+    })
+    .from(products);
 }
 
 export async function queryProductCount(): Promise<number> {

@@ -2,12 +2,15 @@ import type { Metadata } from 'next';
 import { getProducts } from './_server/getProducts';
 import ProductsList from './_components/ProductsList';
 
+// Skip static prerendering — DB is not available at build time
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Products',
   description: 'Browse all available products',
 };
 
-export default async function ProductsPage() {
+export default async function ProductsPage(): Promise<React.JSX.Element> {
   const { products, total } = await getProducts();
 
   return (
