@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(node -e \"const l=require\\('./node_modules/lucide-react'\\);const social=Object.keys\\(l\\).filter\\(k=>/twitter|instagram|linkedin|x$/i.test\\(k\\)\\);console.log\\(social.slice\\(0,20\\)\\)\")"
+    ]
+  }
+}
